@@ -1,15 +1,23 @@
 // 부드러운 전환 애니메이션과 스타일 요소를 고려한 UI용 JS
 
-function showTab(tabId) {
-  const tabs = document.querySelectorAll(".tab");
-  tabs.forEach(tab => {
-    tab.classList.remove("active");
-    tab.style.opacity = 0;
-  });
+window.addEventListener('DOMContentLoaded', () => {
+  const content = document.querySelector('.content');
+  content.classList.add('home-fullscreen'); // 첫 로딩 시 홈 탭이라면 여백 제거
+});
 
-  const targetTab = document.getElementById(tabId);
-  targetTab.classList.add("active");
-  setTimeout(() => targetTab.style.opacity = 1, 50);
+function showTab(tabId) {
+  const tabs = document.querySelectorAll('.tab');
+  tabs.forEach(tab => tab.classList.remove('active'));
+
+  const activeTab = document.getElementById(tabId);
+  if (activeTab) activeTab.classList.add('active');
+
+  const content = document.querySelector('.content');
+  if (tabId === 'home') {
+    content.classList.add('home-fullscreen');
+  } else {
+    content.classList.remove('home-fullscreen');
+  }
 }
 
 

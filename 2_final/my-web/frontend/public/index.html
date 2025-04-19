@@ -4,35 +4,58 @@
   <meta charset="UTF-8">
   <title>스마트폰과 정신건강</title>
   <style>
+    /* 기본 초기화 및 글꼴 설정 */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+    html{
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
     body {
       margin: 0;
+      padding: 0;
+      height: 100%;
       font-family: 'Noto Sans KR', sans-serif;
       background: linear-gradient(to right, #f8fbff, #e6f0fa);
     }
+
+    /* 전체 컨테이너 */
     .container {
       display: flex;
       height: 100vh;
     }
+
+    /* 왼쪽 메뉴 사이드바 */
     .sidebar {
       width: 240px;
-      min-width: 240px; /* 추가 */
-      max-width: 240px; /* 추가 */
+      min-width: 240px;
+      max-width: 240px;
       background: #1ABC9C;
       color: white;
       padding: 30px 20px;
       box-shadow: 4px 0 10px rgba(0,0,0,0.1);
     }
+
     .sidebar h2 {
       font-size: 22px;
       margin-bottom: 25px;
     }
+
     .sidebar ul {
       list-style: none;
       padding: 0;
+      margin: 0;
     }
+
     .sidebar li {
       margin-bottom: 18px;
     }
+
     .sidebar a {
       display: block;
       color: white;
@@ -42,24 +65,60 @@
       transition: color 0.3s;
       cursor: pointer;
     }
+
     .sidebar a:hover {
       color: #1abc9c;
     }
+
+    /* 우측 콘텐츠 영역 */
     .content {
       flex-grow: 1;
-      padding: 50px 60px;
       background-color: #f4f8fb;
       overflow-y: auto;
+      transition: padding 0.3s;
+      padding: 50px 60px; /* 기본 탭일 때 */
     }
+
+    .content.home-fullscreen {
+      padding: 0 !important;
+      margin: 0 !important;
+      background-color: #f4f8fb; /* 또는 transparent */
+    }
+
+    /* 탭 기본 스타일 */
     .tab {
       display: none;
       opacity: 0;
       transition: opacity 0.3s;
+      margin: 0;
+      padding: 0;
     }
+
+    /* 홈 탭 전용 - 여백 제거 */
+    .tab#home {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    /* 활성화된 탭 */
     .tab.active {
       display: block;
       opacity: 1;
     }
+
+    /* 이미지 꽉 채우기 */
+    .full-width-image {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      display: block;
+      margin: 0;
+      padding: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    /* 버튼 */
     button {
       padding: 10px 20px;
       background-color: #3498db;
@@ -70,15 +129,20 @@
       cursor: pointer;
       transition: background 0.3s;
     }
+
     button:hover {
       background-color: #2980b9;
     }
+
+    /* 입력 요소 */
     input, select {
       padding: 8px;
       border: 1px solid #ccc;
       border-radius: 6px;
       font-size: 15px;
     }
+
+    /* 결과 박스 */
     #result {
       margin-top: 25px;
       font-size: 20px;
@@ -94,9 +158,9 @@
 <body>
   <div class="container">
     <div class="sidebar">
-      <h2>📱 MENU</h2>
+      <h2>MENU</h2>
       <ul>
-        <li><a onclick="showTab('home')">🏠 홈</a></li>
+        <li><a onclick="showTab('home')">HOME</a></li>
         <li><a onclick="showTab('depression')">내 또래 우울감</a></li>
         <li><a onclick="showTab('depression_graph')">청소년 우울감 경험률 그래프</a></li>
         <li><a onclick="showTab('smartphone')">스마트폰 사용 비교</a></li>
@@ -107,11 +171,12 @@
     <div class="content">
       <!-- 🏠 홈 탭 (기본 탭) -->
       <div id="home" class="tab active">
-        <h2>👋 스마트폰과 정신건강</h2>
-        <img src="teen-smile.png" alt="청소년 이미지" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 25px;">
-        <p style="font-size: 18px;font-weight: bold; color: #2c3e50;">
+        <!-- <h2>👋 스마트폰과 정신건강</h2> -->
+        <img src="teen-smile02.png" alt="청소년 이미지" class="full-width-image">
+        <!-- <img src="teen-smile02.png" alt="청소년 이미지" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 25px;"> -->
+        <!-- <p style="font-size: 18px;font-weight: bold; color: #2c3e50;">
           이 웹페이지는 청소년의 스마트폰 사용과 정신건강의 관계를 분석하고,<br>
-          건강한 디지털 습관을 만들 수 있도록 도와주는 정보들을 제공합니다.
+          건강한 디지털 습관을 만들 수 있도록 도와주는 정보들을 제공합니다. -->
         </p>
       </div>
 
@@ -156,8 +221,6 @@
       </div>
     </div>
   </div>
-
-  <!-- 📜 탭 전환 스크립트 -->
   <script type="text/javascript" src="script.js">
   </script>
 </body>
