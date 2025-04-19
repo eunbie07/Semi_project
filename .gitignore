@@ -1,0 +1,17 @@
+## .env
+.env
+
+##
+trash/*
+
+study/*
+
+semi/**/node_modules
+semi/**/package-lock.json
+
+# 예시 (.gitignore)
+*.exe
+*.log
+node_modules/
+.vscode/
+.DS_Store
