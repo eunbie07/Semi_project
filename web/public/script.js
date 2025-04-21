@@ -36,7 +36,7 @@ async function getDepression() {
 
   try {
     resultEl.innerHTML = "<span class='loading'>데이터를 불러오는 중...</span>";
-    const res = await fetch(`http://localhost:8000/depression?age=${age}&gender=${gender}&year=${year}`);
+    const res = await fetch(`http://localhost:3001/depression?age=${age}&gender=${gender}&year=${year}`);
     const data = await res.json();
 
     console.log("[응답 확인]", data);

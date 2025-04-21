@@ -2,9 +2,9 @@
 .env
 
 ##
-trash/*
+z_trash/*
 
-study/*
+z_study/*
 
 semi/**/node_modules
 semi/**/package-lock.json
