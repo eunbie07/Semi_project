@@ -2,136 +2,136 @@
   {
     "year": 2016.0,
     "school_level": "초등학교 (%)",
-    "participation_rate": 80.0
+    "private_edu_rate": 80.0
   },
   {
     "year": 2016.0,
     "school_level": "중학교 (%)",
-    "participation_rate": 63.8
+    "private_edu_rate": 63.8
   },
   {
     "year": 2016.0,
     "school_level": "고등학교 (%)",
-    "participation_rate": 58.8
+    "private_edu_rate": 58.8
   },
   {
     "year": 2017.0,
     "school_level": "초등학교 (%)",
-    "participation_rate": 82.7
+    "private_edu_rate": 82.7
   },
   {
     "year": 2017.0,
     "school_level": "중학교 (%)",
-    "participation_rate": 67.4
+    "private_edu_rate": 67.4
   },
   {
     "year": 2017.0,
     "school_level": "고등학교 (%)",
-    "participation_rate": 62.2
+    "private_edu_rate": 62.2
   },
   {
     "year": 2018.0,
     "school_level": "초등학교 (%)",
-    "participation_rate": 82.5
+    "private_edu_rate": 82.5
   },
   {
     "year": 2018.0,
     "school_level": "중학교 (%)",
-    "participation_rate": 69.6
+    "private_edu_rate": 69.6
   },
   {
     "year": 2018.0,
     "school_level": "고등학교 (%)",
-    "participation_rate": 65.2
+    "private_edu_rate": 65.2
   },
   {
     "year": 2019.0,
     "school_level": "초등학교 (%)",
-    "participation_rate": 83.5
+    "private_edu_rate": 83.5
   },
   {
     "year": 2019.0,
     "school_level": "중학교 (%)",
-    "participation_rate": 71.4
+    "private_edu_rate": 71.4
   },
   {
     "year": 2019.0,
     "school_level": "고등학교 (%)",
-    "participation_rate": 67.9
+    "private_edu_rate": 67.9
   },
   {
     "year": 2020.0,
     "school_level": "초등학교 (%)",
-    "participation_rate": 69.7
+    "private_edu_rate": 69.7
   },
   {
     "year": 2020.0,
     "school_level": "중학교 (%)",
-    "participation_rate": 67.3
+    "private_edu_rate": 67.3
   },
   {
     "year": 2020.0,
     "school_level": "고등학교 (%)",
-    "participation_rate": 68.5
+    "private_edu_rate": 68.5
   },
   {
     "year": 2021.0,
     "school_level": "초등학교 (%)",
-    "participation_rate": 82.0
+    "private_edu_rate": 82.0
   },
   {
     "year": 2021.0,
     "school_level": "중학교 (%)",
-    "participation_rate": 73.1
+    "private_edu_rate": 73.1
   },
   {
     "year": 2021.0,
     "school_level": "고등학교 (%)",
-    "participation_rate": 71.3
+    "private_edu_rate": 71.3
   },
   {
     "year": 2022.0,
     "school_level": "초등학교 (%)",
-    "participation_rate": 85.2
+    "private_edu_rate": 85.2
   },
   {
     "year": 2022.0,
     "school_level": "중학교 (%)",
-    "participation_rate": 76.2
+    "private_edu_rate": 76.2
   },
   {
     "year": 2022.0,
     "school_level": "고등학교 (%)",
-    "participation_rate": 72.5
+    "private_edu_rate": 72.5
   },
   {
     "year": 2023.0,
     "school_level": "초등학교 (%)",
-    "participation_rate": 86.0
+    "private_edu_rate": 86.0
   },
   {
     "year": 2023.0,
     "school_level": "중학교 (%)",
-    "participation_rate": 75.4
+    "private_edu_rate": 75.4
   },
   {
     "year": 2023.0,
     "school_level": "고등학교 (%)",
-    "participation_rate": 72.3
+    "private_edu_rate": 72.3
   },
   {
     "year": 2024.0,
     "school_level": "초등학교 (%)",
-    "participation_rate": 87.7
+    "private_edu_rate": 87.7
   },
   {
     "year": 2024.0,
     "school_level": "중학교 (%)",
-    "participation_rate": 78.0
+    "private_edu_rate": 78.0
   },
   {
     "year": 2024.0,
     "school_level": "고등학교 (%)",
-    "participation_rate": 73.4
+    "private_edu_rate": 73.4
   }
 ]
