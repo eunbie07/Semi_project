@@ -4,12 +4,22 @@ import os
 
 app = FastAPI()
 
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], 
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 # JSON 파일 경로 설정
 base_dir = os.path.dirname(__file__)
 depression_path = os.path.join(base_dir, "json/depression.json")
 breakfast_path = os.path.join(base_dir, "json/breakfast_skip.json")
 edu_path = os.path.join(base_dir, "json/private_edu.json")
-stress_path = os.path.join(base_dir, "json/teen_stress_issues.json")  # 추가됨
+stress_path = os.path.join(base_dir, "json/stress_issues.json")  
 
 # 데이터 로딩
 try:
@@ -44,13 +54,7 @@ except Exception as e:
 @app.get("/")
 def root():
     return {
-        "message": (
-            "✅ 정신건강 우울감 API - /depression?age=17&gender=female&year=2023\n"
-            "✅ 아침결식률 API - /breakfast_skip_rate?age=17&gender=female&year=2023\n"
-            "✅ 사교육 참여율 API - /private_edu?age=15&year=2022\n"
-            "✅ 스트레스 고민 항목 API - /stress_issues?year=2024\n"
-            "✅ 고민 항목별 추이 API - /stress_trend?issue=Study"
-        )
+        "message": "depression"
     }
 
 # 우울감 데이터 API
@@ -60,9 +64,9 @@ def get_depression(age: int, gender: str, year: int):
     for item in depression:
         if item["age"] == age and item["gender"] == gender and item["year"] == year:
             print("[우울감 데이터 찾음]", item)
-            return {"depression_rate": item["depression_rate"]}
+            return {"result": True,"depression_rate": item["depression_rate"]}
     print("[우울감 데이터 없음]")
-    return {"depression_rate": None}
+    return {"result": False,"depression_rate": None}
 
 # 아침 결식률 데이터 API
 @app.get("/breakfast_skip_rate")
@@ -72,11 +76,11 @@ def get_breakfast_skip_rate(age: int, gender: str, year: int):
         try:
             if int(item["age"]) == age and item["gender"] == gender and int(item["year"]) == year:
                 print("[아침결식 데이터 찾음]", item)
-                return {"breakfast_skip_rate": item["breakfast_skip_rate"]}
+                return {"result": True,"breakfast_skip_rate": item["breakfast_skip_rate"]}
         except ValueError:
             continue
     print("[아침결식 데이터 없음]")
-    return {"breakfast_skip_rate": None}
+    return {"result": False,"breakfast_skip_rate": None}
 
 # 나이 -> 학제 매핑 함수
 def age_to_school_level(age: int) -> str:
@@ -95,37 +99,33 @@ def get_private_edu(age: int, year: int):
     print(f"[사교육 요청] age={age}, year={year}")
     level = age_to_school_level(age)
     if level is None:
-        return {"error": "지원하지 않는 나이입니다. (8~19세만 조회 가능)"}
+        return {"result": False}
 
     for item in edu_data:
         if int(item["year"]) == year and item["school_level"] == level:
             print("[사교육 데이터 찾음]", item)
-            return {
+            return {"result": True,
                 "school_level": level.replace(" (%)", ""),
-                "private_edu_rate": item["participation_rate"]
+                "private_edu_rate": item["private_edu_rate"]
             }
 
     print("[사교육 데이터 없음]")
-    return {"private_edu_rate": None}
-
-# 스트레스 고민 항목 - 연도별 전체 보기
-@app.get("/stress_issues")
-def get_stress_issues(year: int):
-    result = [item for item in stress_data if int(item["year"]) == year]
+    return {"result": False,"private_edu_rate": None}
     if not result:
-        return {"message": f"No data available for year {year}"}
+        return {"result": False}
     return {"year": year, "issues": result}
 
-# 스트레스 고민 항목 - 특정 항목 추이 보기
-@app.get("/stress_trend")
-def get_stress_trend(issue: str):
-    trend = [
-        {"year": int(item["year"]), "rate": item["concern_rate(%)"]}
-        for item in stress_data if item["issue"].lower() == issue.lower()
-    ]
-    if not trend:
-        return {"message": f"No trend data found for issue: '{issue}'"}
-    return {
-        "issue": issue,
-        "trend": sorted(trend, key=lambda x: x["year"])
+
+
+@app.get("/stress_top_issue")
+def get_stress_top_issue(year: int):
+    year_data = [item for item in stress_data if int(item["year"]) == year]
+    if not year_data:
+        return {"result": False}
+    
+    # 고민률 기준으로 최대 항목 찾기
+    top = max(year_data, key=lambda x: x["concern_rate(%)"])
+    return {"result": True,
+        "top_issue": top["issue"],
+        "concern_rate(%)": top["concern_rate(%)"]
     }

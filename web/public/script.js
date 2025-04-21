@@ -1,4 +1,3 @@
-// 부드러운 전환 애니메이션과 스타일 요소를 고려한 UI용 JS
 
 window.addEventListener('DOMContentLoaded', () => {
   const content = document.querySelector('.content');
@@ -30,19 +29,19 @@ async function getDepression() {
   const genderKor = gender === "male" ? "남학생" : "여학생";
 
   if (isNaN(age) || isNaN(year)) {
-    resultEl.innerHTML = `<span class="warning">⚠️ 나이와 연도를 입력해 주세요.</span>`;
+    resultEl.innerHTML = `<span class="warning">나이와 연도를 입력해 주세요.</span>`;
     return;
   }
 
   try {
     resultEl.innerHTML = "<span class='loading'>데이터를 불러오는 중...</span>";
-    const res = await fetch(`http://localhost:3001/depression?age=${age}&gender=${gender}&year=${year}`);
+    const res = await fetch(`/api/depression?age=${age}&gender=${gender}&year=${year}`);
     const data = await res.json();
 
     console.log("[응답 확인]", data);
 
     if (data.depression_rate == null || isNaN(data.depression_rate)) {
-      resultEl.innerHTML = `<span class='notfound'>😥 해당 정보가 없습니다.</span>`;
+      resultEl.innerHTML = `<span class='notfound'> 해당 정보가 없습니다.</span>`;
     } else {
       resultEl.innerHTML = `
         <div class="result-box">
@@ -53,6 +52,6 @@ async function getDepression() {
     }
   } catch (err) {
     console.error(err);
-    resultEl.innerHTML = `<span class='error'>🚨 서버 오류 또는 연결 실패.</span>`;
+    resultEl.innerHTML = `<span class='error'>서버 오류 또는 연결 실패.</span>`;
   }
 }
