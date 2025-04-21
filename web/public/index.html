@@ -165,6 +165,8 @@
         <li><a onclick="showTab('depression_graph')">청소년 우울감 경험률 그래프</a></li>
         <li><a onclick="showTab('smartphone')">스마트폰 사용 비교</a></li>
         <li><a onclick="showTab('tips')">정신건강 꿀팁</a></li>
+        <li><a onclick="showTab('smartphone_badeffect')">스마트폰의 부정적영향</a></li>
+        <li><a onclick="showTab('stress_issues')">청소년 최대 고민은?</a></li>
       </ul>
     </div>
 
@@ -190,7 +192,7 @@
             <option value="female">여학생</option>
           </select>
         </label><br><br>
-        <label>연도: <input type="number" id="year" value="2023"></label><br><br>
+        <label>연도: <input type="number" id="year" value="2023"></label> <span style="font-size: 0.9em; color: gray;">(2016년 부터 2024년도 까지만 입력해주세요)</span><br><br>
         <button onclick="getDepression()">📥 조회하기</button>
         <p id="result"></p>
       </div>
@@ -219,7 +221,23 @@
           <li>🔌 디지털 디톡스 주간 운영</li>
         </ul>
       </div>
-    </div>
+      <!-- 🧠 팁 -->
+      <div id="smartphone_badeffect" class="tab">
+        <h2>📊 스마트폰의 부정적 영향</h2>
+        <label>나이: <input type="int" id="sp_age" min="10" max="30" step="1"></label><br><br>
+        </label>
+        <label>연도: <input type="int" id="sp_year" value="2023"></label>
+        <span style="font-size: 0.9em; color: gray;"> (2017년 부터 2023년도 까지만 입력해주세요)</span><br><br>
+        <button onclick="getSmartphoneBadeffect()">📥 조회하기</button>
+        <p id="resultSmartphone"></p>
+      </div>
+      <div id="stress_issues" class="tab">
+        <h2>📊 청소년 최대 고민은?</h2> <!-- ✅ 닫는 태그 수정 -->
+        <label>연도: <input type="number" id="si_year" value="2022"></label>
+        <span style="font-size: 0.9em; color: gray;">(2016년 부터 2024년도 까지 짝수년도만 입력해주세요)</span><br><br>
+        <button onclick="getStressIssues()">📥 조회하기</button>
+        <div id="resultStress"></div>
+      </div>
   </div>
   <script type="text/javascript" src="script.js">
   </script>
