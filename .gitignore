@@ -1,0 +1,18 @@
+## .env
+.env
+
+##
+z_trash/*
+z_study/*
+web_test/*
+
+**/node_modules
+**/**/package-lock.json
+package-lock.json
+
+# 예시 (.gitignore)
+*.exe
+*.log
+node_modules/
+.vscode/
+.DS_Store
