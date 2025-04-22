@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>홈페이지</title>
   <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=54bddc113d6d9d4f81582fd0de39cef0&autoload=false&libraries=services"></script>
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
   <script defer src="script_2.js"></script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -199,6 +202,7 @@
       <li><a onclick="showTab('smartphone_badeffect')">스마트폰의 부정적영향</a></li>
       <li><a onclick="showTab('stress_issues')">청소년 최대 고민은?</a></li>
       <li><a onclick="showTab('stress_region')">지역별 스트레스 지도</a></li>
+      <li><a onclick="showTab('stress_chart')">청소년 스트레스 차트</a></li>
     </ul>
   </nav>
 
@@ -293,6 +297,18 @@
       <span style="font-size: 0.9em; color: gray;">(2015년 ~ 2024년)</span><br><br>
       <button onclick="updateMapByYear()">📥 지도 조회하기</button><br><br>
       <div id="map" style="width: 80%; height: 400px;"></div>
+    </div>
+    <div id="stress_chart" class="tab" style="display:none;">
+      <h2>청소년 고민 도넛 차트</h2>
+      <label for="chart_year">연도 선택:</label>
+      <select id="chart_year">
+        <option value="2024">2024</option>
+        <option value="2022">2022</option>
+        <option value="2020">2020</option>
+        <option value="2018">2018</option>
+        <option value="2016">2016</option>
+      </select>
+      <div id="chartdiv" style="width:100%; height:500px;"></div>
     </div>
   </main>
 </body>

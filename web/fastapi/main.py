@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 import json
 import os
+from fastapi import Query 
 
 app = FastAPI()
 
@@ -153,10 +154,10 @@ def get_stress_rate_by_region(region: str, year: int):
     }
 
 
-@app.get("/stress-issues")
+@app.get("/stress_issues")
 def get_stress_issues(year: float = Query(...)):
     filtered = [
         {"issue": d["issue"], "concern_rate": d["concern_rate(%)"]}
-        for d in all_data if d["year"] == year
+        for d in stress_data if d["year"] == year
     ]
     return filtered

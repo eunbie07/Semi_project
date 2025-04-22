@@ -234,3 +234,64 @@ function addMarker({ region, lat, lng, stress_rate }, color, map, zIndex = 1) {
 
   marker.setMap(map);
 }
+
+const chartSelect = document.getElementById("chart_year");
+let chartRoot;
+
+function drawStressDonut(data, year) {
+  if (chartRoot) chartRoot.dispose();
+
+  am5.ready(() => {
+    chartRoot = am5.Root.new("chartdiv");
+
+    chartRoot.setThemes([am5themes_Animated.new(chartRoot)]);
+
+    const chart = chartRoot.container.children.push(
+      am5percent.PieChart.new(chartRoot, {
+        layout: chartRoot.verticalLayout
+      })
+    );
+
+    const series = chart.series.push(
+      am5percent.PieSeries.new(chartRoot, {
+        valueField: "concern_rate",
+        categoryField: "issue",
+        innerRadius: am5.percent(50)
+      })
+    );
+
+    series.data.setAll(data);
+
+    chart.children.push(
+      am5.Label.new(chartRoot, {
+        text: `${year}년`,
+        fontSize: 24,
+        centerX: am5.percent(50),
+        centerY: am5.percent(50),
+        fill: am5.color(0x444444)
+      })
+    );
+  });
+}
+
+function loadStressDonut(year) {
+  fetch(`http://192.168.1.23:3001/stress_issues?year=${year}`)
+    .then(res => res.json())
+    .then(data => drawStressDonut(data, year));
+}
+
+// 초기 로딩
+chartSelect.addEventListener("change", () => {
+  loadStressDonut(chartSelect.value);
+});
+
+// 탭이 stress_chart일 때 차트 로딩
+if (typeof showTab === "function") {
+  const originalShowTab = showTab;
+  showTab = function (tabId) {
+    originalShowTab(tabId);
+    if (tabId === "stress_chart") {
+      loadStressDonut(chartSelect.value);
+    }
+  };
+}
