@@ -1,0 +1,767 @@
+[
+  {
+    "region": "서울",
+    "data": [
+      {
+        "year": 2015,
+        "stress_rate": 36.7
+      },
+      {
+        "year": 2016,
+        "stress_rate": 39.0
+      },
+      {
+        "year": 2017,
+        "stress_rate": 38.7
+      },
+      {
+        "year": 2018,
+        "stress_rate": 42.7
+      },
+      {
+        "year": 2019,
+        "stress_rate": 41.6
+      },
+      {
+        "year": 2020,
+        "stress_rate": 35.1
+      },
+      {
+        "year": 2021,
+        "stress_rate": 39.6
+      },
+      {
+        "year": 2022,
+        "stress_rate": 43.5
+      },
+      {
+        "year": 2023,
+        "stress_rate": 39.6
+      },
+      {
+        "year": 2024,
+        "stress_rate": 45.3
+      }
+    ]
+  },
+  {
+    "region": "부산",
+    "data": [
+      {
+        "year": 2015,
+        "stress_rate": 32.4
+      },
+      {
+        "year": 2016,
+        "stress_rate": 31.0
+      },
+      {
+        "year": 2017,
+        "stress_rate": 32.6
+      },
+      {
+        "year": 2018,
+        "stress_rate": 35.2
+      },
+      {
+        "year": 2019,
+        "stress_rate": 36.6
+      },
+      {
+        "year": 2020,
+        "stress_rate": 30.9
+      },
+      {
+        "year": 2021,
+        "stress_rate": 36.9
+      },
+      {
+        "year": 2022,
+        "stress_rate": 38.9
+      },
+      {
+        "year": 2023,
+        "stress_rate": 32.6
+      },
+      {
+        "year": 2024,
+        "stress_rate": 37.1
+      }
+    ]
+  },
+  {
+    "region": "대구",
+    "data": [
+      {
+        "year": 2015,
+        "stress_rate": 31.3
+      },
+      {
+        "year": 2016,
+        "stress_rate": 33.1
+      },
+      {
+        "year": 2017,
+        "stress_rate": 33.8
+      },
+      {
+        "year": 2018,
+        "stress_rate": 38.5
+      },
+      {
+        "year": 2019,
+        "stress_rate": 35.9
+      },
+      {
+        "year": 2020,
+        "stress_rate": 30.2
+      },
+      {
+        "year": 2021,
+        "stress_rate": 38.1
+      },
+      {
+        "year": 2022,
+        "stress_rate": 39.0
+      },
+      {
+        "year": 2023,
+        "stress_rate": 35.0
+      },
+      {
+        "year": 2024,
+        "stress_rate": 39.1
+      }
+    ]
+  },
+  {
+    "region": "인천",
+    "data": [
+      {
+        "year": 2015,
+        "stress_rate": 35.5
+      },
+      {
+        "year": 2016,
+        "stress_rate": 38.1
+      },
+      {
+        "year": 2017,
+        "stress_rate": 39.5
+      },
+      {
+        "year": 2018,
+        "stress_rate": 40.4
+      },
+      {
+        "year": 2019,
+        "stress_rate": 39.7
+      },
+      {
+        "year": 2020,
+        "stress_rate": 34.8
+      },
+      {
+        "year": 2021,
+        "stress_rate": 37.6
+      },
+      {
+        "year": 2022,
+        "stress_rate": 42.3
+      },
+      {
+        "year": 2023,
+        "stress_rate": 36.9
+      },
+      {
+        "year": 2024,
+        "stress_rate": 42.4
+      }
+    ]
+  },
+  {
+    "region": "광주",
+    "data": [
+      {
+        "year": 2015,
+        "stress_rate": 37.3
+      },
+      {
+        "year": 2016,
+        "stress_rate": 39.9
+      },
+      {
+        "year": 2017,
+        "stress_rate": 37.6
+      },
+      {
+        "year": 2018,
+        "stress_rate": 40.3
+      },
+      {
+        "year": 2019,
+        "stress_rate": 39.3
+      },
+      {
+        "year": 2020,
+        "stress_rate": 32.9
+      },
+      {
+        "year": 2021,
+        "stress_rate": 39.1
+      },
+      {
+        "year": 2022,
+        "stress_rate": 43.7
+      },
+      {
+        "year": 2023,
+        "stress_rate": 37.4
+      },
+      {
+        "year": 2024,
+        "stress_rate": 42.0
+      }
+    ]
+  },
+  {
+    "region": "대전",
+    "data": [
+      {
+        "year": 2015,
+        "stress_rate": 36.9
+      },
+      {
+        "year": 2016,
+        "stress_rate": 38.8
+      },
+      {
+        "year": 2017,
+        "stress_rate": 41.6
+      },
+      {
+        "year": 2018,
+        "stress_rate": 41.9
+      },
+      {
+        "year": 2019,
+        "stress_rate": 42.8
+      },
+      {
+        "year": 2020,
+        "stress_rate": 37.0
+      },
+      {
+        "year": 2021,
+        "stress_rate": 39.5
+      },
+      {
+        "year": 2022,
+        "stress_rate": 41.2
+      },
+      {
+        "year": 2023,
+        "stress_rate": 38.5
+      },
+      {
+        "year": 2024,
+        "stress_rate": 43.5
+      }
+    ]
+  },
+  {
+    "region": "울산",
+    "data": [
+      {
+        "year": 2015,
+        "stress_rate": 33.3
+      },
+      {
+        "year": 2016,
+        "stress_rate": 32.7
+      },
+      {
+        "year": 2017,
+        "stress_rate": 33.4
+      },
+      {
+        "year": 2018,
+        "stress_rate": 36.7
+      },
+      {
+        "year": 2019,
+        "stress_rate": 34.2
+      },
+      {
+        "year": 2020,
+        "stress_rate": 28.4
+      },
+      {
+        "year": 2021,
+        "stress_rate": 34.7
+      },
+      {
+        "year": 2022,
+        "stress_rate": 38.9
+      },
+      {
+        "year": 2023,
+        "stress_rate": 34.3
+      },
+      {
+        "year": 2024,
+        "stress_rate": 38.5
+      }
+    ]
+  },
+  {
+    "region": "세종",
+    "data": [
+      {
+        "year": 2015,
+        "stress_rate": 32.6
+      },
+      {
+        "year": 2016,
+        "stress_rate": 35.4
+      },
+      {
+        "year": 2017,
+        "stress_rate": 40.7
+      },
+      {
+        "year": 2018,
+        "stress_rate": 39.6
+      },
+      {
+        "year": 2019,
+        "stress_rate": 37.2
+      },
+      {
+        "year": 2020,
+        "stress_rate": 33.0
+      },
+      {
+        "year": 2021,
+        "stress_rate": 37.7
+      },
+      {
+        "year": 2022,
+        "stress_rate": 41.6
+      },
+      {
+        "year": 2023,
+        "stress_rate": 36.1
+      },
+      {
+        "year": 2024,
+        "stress_rate": 37.0
+      }
+    ]
+  },
+  {
+    "region": "경기",
+    "data": [
+      {
+        "year": 2015,
+        "stress_rate": 35.1
+      },
+      {
+        "year": 2016,
+        "stress_rate": 38.5
+      },
+      {
+        "year": 2017,
+        "stress_rate": 37.3
+      },
+      {
+        "year": 2018,
+        "stress_rate": 41.6
+      },
+      {
+        "year": 2019,
+        "stress_rate": 41.6
+      },
+      {
+        "year": 2020,
+        "stress_rate": 35.8
+      },
+      {
+        "year": 2021,
+        "stress_rate": 40.2
+      },
+      {
+        "year": 2022,
+        "stress_rate": 42.6
+      },
+      {
+        "year": 2023,
+        "stress_rate": 39.0
+      },
+      {
+        "year": 2024,
+        "stress_rate": 44.3
+      }
+    ]
+  },
+  {
+    "region": "강원",
+    "data": [
+      {
+        "year": 2015,
+        "stress_rate": 35.0
+      },
+      {
+        "year": 2016,
+        "stress_rate": 36.7
+      },
+      {
+        "year": 2017,
+        "stress_rate": 37.9
+      },
+      {
+        "year": 2018,
+        "stress_rate": 40.9
+      },
+      {
+        "year": 2019,
+        "stress_rate": 39.0
+      },
+      {
+        "year": 2020,
+        "stress_rate": 36.5
+      },
+      {
+        "year": 2021,
+        "stress_rate": 39.6
+      },
+      {
+        "year": 2022,
+        "stress_rate": 39.4
+      },
+      {
+        "year": 2023,
+        "stress_rate": 36.8
+      },
+      {
+        "year": 2024,
+        "stress_rate": 42.6
+      }
+    ]
+  },
+  {
+    "region": "충북",
+    "data": [
+      {
+        "year": 2015,
+        "stress_rate": 39.9
+      },
+      {
+        "year": 2016,
+        "stress_rate": 41.0
+      },
+      {
+        "year": 2017,
+        "stress_rate": 37.3
+      },
+      {
+        "year": 2018,
+        "stress_rate": 41.8
+      },
+      {
+        "year": 2019,
+        "stress_rate": 43.4
+      },
+      {
+        "year": 2020,
+        "stress_rate": 35.9
+      },
+      {
+        "year": 2021,
+        "stress_rate": 41.5
+      },
+      {
+        "year": 2022,
+        "stress_rate": 41.6
+      },
+      {
+        "year": 2023,
+        "stress_rate": 36.8
+      },
+      {
+        "year": 2024,
+        "stress_rate": 44.4
+      }
+    ]
+  },
+  {
+    "region": "충남",
+    "data": [
+      {
+        "year": 2015,
+        "stress_rate": 36.9
+      },
+      {
+        "year": 2016,
+        "stress_rate": 39.6
+      },
+      {
+        "year": 2017,
+        "stress_rate": 37.8
+      },
+      {
+        "year": 2018,
+        "stress_rate": 40.0
+      },
+      {
+        "year": 2019,
+        "stress_rate": 39.9
+      },
+      {
+        "year": 2020,
+        "stress_rate": 36.6
+      },
+      {
+        "year": 2021,
+        "stress_rate": 40.5
+      },
+      {
+        "year": 2022,
+        "stress_rate": 39.7
+      },
+      {
+        "year": 2023,
+        "stress_rate": 36.7
+      },
+      {
+        "year": 2024,
+        "stress_rate": 41.3
+      }
+    ]
+  },
+  {
+    "region": "전북",
+    "data": [
+      {
+        "year": 2015,
+        "stress_rate": 38.0
+      },
+      {
+        "year": 2016,
+        "stress_rate": 38.7
+      },
+      {
+        "year": 2017,
+        "stress_rate": 40.6
+      },
+      {
+        "year": 2018,
+        "stress_rate": 40.9
+      },
+      {
+        "year": 2019,
+        "stress_rate": 42.6
+      },
+      {
+        "year": 2020,
+        "stress_rate": 37.9
+      },
+      {
+        "year": 2021,
+        "stress_rate": 41.0
+      },
+      {
+        "year": 2022,
+        "stress_rate": 43.3
+      },
+      {
+        "year": 2023,
+        "stress_rate": 40.0
+      },
+      {
+        "year": 2024,
+        "stress_rate": 46.1
+      }
+    ]
+  },
+  {
+    "region": "전남",
+    "data": [
+      {
+        "year": 2015,
+        "stress_rate": 35.4
+      },
+      {
+        "year": 2016,
+        "stress_rate": 36.2
+      },
+      {
+        "year": 2017,
+        "stress_rate": 35.2
+      },
+      {
+        "year": 2018,
+        "stress_rate": 38.8
+      },
+      {
+        "year": 2019,
+        "stress_rate": 37.5
+      },
+      {
+        "year": 2020,
+        "stress_rate": 30.6
+      },
+      {
+        "year": 2021,
+        "stress_rate": 36.0
+      },
+      {
+        "year": 2022,
+        "stress_rate": 37.8
+      },
+      {
+        "year": 2023,
+        "stress_rate": 35.2
+      },
+      {
+        "year": 2024,
+        "stress_rate": 39.8
+      }
+    ]
+  },
+  {
+    "region": "경북",
+    "data": [
+      {
+        "year": 2015,
+        "stress_rate": 36.2
+      },
+      {
+        "year": 2016,
+        "stress_rate": 36.1
+      },
+      {
+        "year": 2017,
+        "stress_rate": 35.8
+      },
+      {
+        "year": 2018,
+        "stress_rate": 39.8
+      },
+      {
+        "year": 2019,
+        "stress_rate": 39.9
+      },
+      {
+        "year": 2020,
+        "stress_rate": 31.7
+      },
+      {
+        "year": 2021,
+        "stress_rate": 35.4
+      },
+      {
+        "year": 2022,
+        "stress_rate": 38.1
+      },
+      {
+        "year": 2023,
+        "stress_rate": 34.8
+      },
+      {
+        "year": 2024,
+        "stress_rate": 35.4
+      }
+    ]
+  },
+  {
+    "region": "경남",
+    "data": [
+      {
+        "year": 2015,
+        "stress_rate": 33.7
+      },
+      {
+        "year": 2016,
+        "stress_rate": 35.0
+      },
+      {
+        "year": 2017,
+        "stress_rate": 36.4
+      },
+      {
+        "year": 2018,
+        "stress_rate": 38.0
+      },
+      {
+        "year": 2019,
+        "stress_rate": 35.1
+      },
+      {
+        "year": 2020,
+        "stress_rate": 30.2
+      },
+      {
+        "year": 2021,
+        "stress_rate": 35.2
+      },
+      {
+        "year": 2022,
+        "stress_rate": 38.8
+      },
+      {
+        "year": 2023,
+        "stress_rate": 33.5
+      },
+      {
+        "year": 2024,
+        "stress_rate": 39.3
+      }
+    ]
+  },
+  {
+    "region": "제주",
+    "data": [
+      {
+        "year": 2015,
+        "stress_rate": 31.7
+      },
+      {
+        "year": 2016,
+        "stress_rate": 37.2
+      },
+      {
+        "year": 2017,
+        "stress_rate": 33.9
+      },
+      {
+        "year": 2018,
+        "stress_rate": 38.6
+      },
+      {
+        "year": 2019,
+        "stress_rate": 40.0
+      },
+      {
+        "year": 2020,
+        "stress_rate": 33.0
+      },
+      {
+        "year": 2021,
+        "stress_rate": 37.3
+      },
+      {
+        "year": 2022,
+        "stress_rate": 39.7
+      },
+      {
+        "year": 2023,
+        "stress_rate": 37.3
+      },
+      {
+        "year": 2024,
+        "stress_rate": 45.0
+      }
+    ]
+  }
+]
