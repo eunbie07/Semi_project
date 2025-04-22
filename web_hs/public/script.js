@@ -1,3 +1,26 @@
+const phone = document.getElementById("phone");
+
+phone.addEventListener("click", () => {
+  // 배경 흰색 전환
+  document.body.classList.add("transitioning");
+
+  // 이미지 변경
+  setTimeout(() => {
+    phone.src = "assets/phone_on.png";
+  }, 50);
+
+  // 줌인 효과
+  setTimeout(() => {
+    phone.classList.add("zoomed");
+  }, 150);
+
+  // 페이지 전환
+  setTimeout(() => {
+    window.location.href = "homepage.html";
+  }, 1800); // 애니메이션 끝난 뒤 전환
+});
+
+
 // 스마트폰 과의존 자가진단 + 정서 위험 점수 산출기
 
 const questions = [
