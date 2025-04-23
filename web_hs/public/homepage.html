@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apple Watch Series 10</title>
+  <title>smartphone_overdependence</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=YOUR_KEY&autoload=false&libraries=services"></script>
+  <script defer src="stress_map.js"></script>
+  <script defer src="weather.js"></script>
 </head>
 <body>
   <header>  
@@ -16,13 +20,13 @@
                 </a>
               </div>
           <ul class="menu">
-            <li><a href="weather.html">날씨 감정 그래프</a></li>
-            <li><a href="test.html">정신 검사 테스트</a></li>
-            <li><a href="#">우울감</a></li>
-            <li><a href="#">통계</a></li>
-            <li><a href="#">지도</a></li>
+            <li><a href="#weather">날씨 감정 그래프</a></li>
+            <li><a href="#map">지도</a></li>
+            <li><a href="#test">정신 검사 테스트</a></li>
+            <li><a href="#depression">우울감</a></li>
+            <li><a href="#stats">통계</a></li>
             <li><a href="quiz_menu.html">Quiz</a></li>
-            <li><a href="#">Biorthythm</a></li>
+            <li><a href="#bio">Biorthythm</a></li>
           </ul>
         </div>
       </nav>
@@ -36,16 +40,23 @@
     <img src="/web_hs/public/assets/home.png" alt="Home_img" class="home-image" />
   </section>
   
-  <section class="full-section home-hero bg-gray">
-    <h2>날씨 감정 그래프</h2>
+  <section id="weather" class="full-section weather-page bg-gray">
+    <h2>Depression & Weather</h2>
+    <canvas id="weatherChart" width="800" height="300"></canvas>
+    <p id="bestTimeMessage" class="message"></p>
+    <p id="lightestMoodMessage" class="message"></p>
+    <p id="heaviestMoodMessage" class="message"></p>
+  </section>
+
+  <section id="map" class="full-section home-hero bg-white">
+    <iframe src="map.html" width="100%" height="600" style="border: none;" loading="lazy"></iframe>
   </section>
   
-  <section class="full-section home-hero bg-white">
-    <h2>지도 기반 시각화</h2>
-    <p>지역별 스트레스·우울감 지수를 확인해보세요.</p>
-  </section>
   
-  <section class="full-section home-hero bg-gray">
+  
+  
+  
+  <section id="test" class="full-section home-hero bg-gray">
     <h2>스마트폰 사용 자가진단</h2>
     <p>당신의 정서와 스마트폰은 얼마나 연결되어 있나요?</p>
     <div class="buttons">
@@ -53,9 +64,24 @@
     </div>
   </section>
   
-  <section class="full-section home-hero bg-white">
+  <section id="stats" class="full-section home-hero bg-white">
+    <h2>우울감</h2>
+    <p>청소년 최대 고민은 ? & 고민 차트</p>
+  </section>
+
+  <section id="stats" class="full-section home-hero bg-white">
     <h2>통계</h2>
     <p>청소년 최대 고민은 ? & 고민 차트</p>
+  </section>
+
+  <section id="stats" class="full-section home-hero bg-gray">
+    <h2>Quiz</h2>
+    <p>청소년 최대 고민은 ? & 고민 차트</p>
+  </section>
+
+  <section id="stats" class="full-section home-hero bg-white">
+    <h2>Biorthythm</h2>
+    <p></p>
   </section>
 </body>
 </html>
