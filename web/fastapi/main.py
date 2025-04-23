@@ -21,6 +21,8 @@ breakfast_path = os.path.join(base_dir, "json/breakfast_skip.json")
 edu_path = os.path.join(base_dir, "json/private_edu.json")
 stress_path = os.path.join(base_dir, "json/stress_issues.json")  
 stress_region_path = os.path.join(base_dir, "json/stress_region.json")
+breakfast_region_path = os.path.join(base_dir, "json/breakfast_region.json")
+
 
 try:
     with open(depression_path, "r", encoding="utf-8") as f:
@@ -56,6 +58,14 @@ try:
 except Exception as e:
     print("지역별 스트레스 데이터 로딩 실패:", e)
     stress_region_data = []
+
+try:
+    with open(breakfast_region_path, "r", encoding="utf-8") as f:
+        breakfast_region_data = json.load(f)
+except Exception as e:
+    print("지역별 아침식사 결식률 데이터 로딩 실패:", e)
+    breakfast_region_data = []
+
 
 
 @app.get("/")
@@ -161,3 +171,24 @@ def get_stress_issues(year: float = Query(...)):
         for d in stress_data if d["year"] == year
     ]
     return filtered
+
+@app.get("/breakfast_region")
+def get_breakfast_rate(region: str = Query(...), year: int = Query(...)):
+    region = region.strip()
+    print(f"[아침식사 결식률 요청] region={region}, year={year}")
+
+    year_key = f"{year}.0"  # <- 이걸로 수정 필요
+    for item in breakfast_region_data:
+        if item["지역"].strip() == region:
+            if year_key in item:
+                return {
+                    "result": True,
+                    "region": region,
+                    "year": year,
+                    "breakfast_rate": item[year_key]
+                }
+
+    return {
+        "result": False,
+        "message": "해당 지역 또는 연도의 데이터가 없습니다."
+    }

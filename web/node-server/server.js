@@ -68,6 +68,20 @@ app.get('/api/stress_region', async (req, res) => {
   }
 });
 
+app.get('/api/breakfast_region', async (req, res) => {
+  const { region, year } = req.query;
+
+  try {
+    const response = await axios.get('http://192.168.1.23:3001/breakfast_region', {
+      params: { region, year }
+    });
+    res.send(response.data); 
+  } catch (error) {
+    console.error('백엔드 호출 오류:', error.message);
+    res.status(500).send({ result: false, message: '백엔드 오류 발생' });
+  }
+});
+
 
 app.get('/api/stress_issues', async (req, res) => {
   const { year } = req.query;

@@ -203,6 +203,7 @@
       <li><a onclick="showTab('stress_issues')">청소년 최대 고민은?</a></li>
       <li><a onclick="showTab('stress_region')">지역별 스트레스 지도</a></li>
       <li><a onclick="showTab('stress_chart')">청소년 스트레스 차트</a></li>
+      <li><a onclick="showTab('breakfast_region')">지역별 아침식사 결식률 지도</a></li>
     </ul>
   </nav>
 
@@ -309,6 +310,12 @@
         <option value="2016">2016</option>
       </select>
       <div id="chartdiv" style="width:100%; height:500px;"></div>
+    </div>
+    <div class="tab" id="breakfast_region" style="display:none;">
+      <h2>지역별 아침식사 결식률</h2><br>
+      <label>연도: <input type="number" id="breakfast_map_year" value="2024" min="2015" max="2024" /></label><br><br>
+      <button onclick="updateBreakfastMapByYear()">📥 지도 조회하기</button><br><br>
+      <div id="breakfast_map" style="width: 30%; height: 400px;"></div>
     </div>
   </main>
 </body>

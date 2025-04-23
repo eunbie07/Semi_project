@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>감성 날씨 우울지수 차트</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: 'Nanum Gothic', sans-serif;
+      background: white;
+      color: #333;
+      margin: 0;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    canvas {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .message {
+      font-size: 1.2em;
+      margin-top: 12px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h2>Depression & Weather</h2>
+  <canvas id="weatherChart" width="800" height="300"></canvas>
+  <p id="bestTimeMessage" class="message"></p>
+  <p id="lightestMoodMessage" class="message"></p>
+  <p id="heaviestMoodMessage" class="message"></p>
+
+  <script>
+    const serviceKey = "89mzRrYVPoIjA0HWVA%2FtiFPmvByqnXJFK8acRZ9tVXmETXDcn%2FQq0LmCwdO%2B5H%2F4q4G6Emy3NFG2bLbk8pxoPQ%3D%3D";
+    const today = new Date();
+    const baseDate = today.toISOString().slice(0,10).replace(/-/g, '');
+    const baseTime = "0500";
+    const nx = 60, ny = 127;
+
+    const url = `https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst?serviceKey=${serviceKey}&pageNo=1&numOfRows=1000&dataType=JSON&base_date=${baseDate}&base_time=${baseTime}&nx=${nx}&ny=${ny}`;
+
+    fetch(url)
+      .then(res => res.json())
+      .then(data => {
+        const items = data.response.body.items.item;
+        const hours = [];
+        const tempList = [], depressionScores = [], moodEmojis = [];
+
+        const tempMap = {}, skyMap = {}, popMap = {};
+
+        items.forEach(item => {
+          const time = item.fcstTime;
+          if (item.category === "TMP") tempMap[time] = parseInt(item.fcstValue);
+          if (item.category === "SKY") skyMap[time] = parseInt(item.fcstValue);
+          if (item.category === "POP") popMap[time] = parseInt(item.fcstValue);
+        });
+
+        for (const time in tempMap) {
+          const hourInt = parseInt(time.slice(0, 2));
+          const ampmHour = (hourInt % 12 === 0 ? 12 : hourInt % 12);
+          const period = hourInt < 12 ? "AM" : "PM";
+          const hourLabel = `${ampmHour} ${period}`;
+
+          const temp = tempMap[time];
+          const sky = skyMap[time] || 1;
+          const pop = popMap[time] || 0;
+
+          let dScore = 0;
+          if (sky === 3) dScore += 10;
+          else if (sky === 4) dScore += 15;
+          if (pop >= 30) dScore += 10;
+          else if (pop >= 10) dScore += 5;
+          if (temp < 15 || temp > 25) dScore += 5;
+          if (dScore > 30) dScore = 30;
+
+          const dScore10 = Math.round((dScore / 30) * 10 * 10) / 10;
+
+          let mood = "😄";
+          if (dScore10 >= 8) mood = "😢";
+          else if (dScore10 >= 6) mood = "😟";
+          else if (dScore10 >= 4) mood = "😐";
+          else if (dScore10 >= 2) mood = "😊";
+
+          hours.push(hourLabel);
+          tempList.push(temp);
+          depressionScores.push(dScore10);
+          moodEmojis.push(mood);
+        }
+
+        const maxTemp = Math.max(...tempList);
+        const bestIndex = tempList.indexOf(maxTemp);
+        const bestTime = hours[bestIndex];
+
+        const minDep = Math.min(...depressionScores);
+        const bestMoodIndex = depressionScores.indexOf(minDep);
+        const lightestTime = hours[bestMoodIndex];
+
+        const maxDep = Math.max(...depressionScores);
+        const worstMoodIndex = depressionScores.indexOf(maxDep);
+        const heaviestTime = hours[worstMoodIndex];
+
+        document.getElementById("bestTimeMessage").innerText =
+          `🌤️ 오늘 가장 기온이 높은 시간은 ${bestTime} 입니다!`;
+        document.getElementById("lightestMoodMessage").innerText =
+          `😊 가장 마음이 가벼운 시간은 ${lightestTime} 입니다!`;
+        document.getElementById("heaviestMoodMessage").innerText =
+          `😟 가장 마음이 무거운 시간은 ${heaviestTime} 입니다!`;
+
+        new Chart(document.getElementById('weatherChart'), {
+          type: 'line',
+          data: {
+            labels: hours,
+            datasets: [
+              {
+                label: '기온 (℃)',
+                data: tempList,
+                borderColor: '#8cc9f0',
+                backgroundColor: 'rgba(140,201,240,0.3)',
+                fill: true,
+                tension: 0.4,
+                pointRadius: 4,
+                pointHoverRadius: 6,
+                yAxisID: 'y'
+              },
+              {
+                label: '우울지수',
+                data: depressionScores,
+                borderColor: '#d59ef2',
+                backgroundColor: 'rgba(213,158,242,0.25)',
+                fill: true,
+                tension: 0.4,
+                pointRadius: 4,
+                pointHoverRadius: 6,
+                yAxisID: 'y1'
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            plugins: {
+              tooltip: {
+                callbacks: {
+                  label: function(context) {
+                    const label = context.dataset.label || '';
+                    const value = context.raw;
+                    const index = context.dataIndex;
+                    if (label.includes("우울지수")) {
+                      return `${label}: ${value} (${moodEmojis[index]})`;
+                    }
+                    return `${label}: ${value}℃`;
+                  }
+                }
+              },
+              legend: {
+                labels: {
+                  color: '#444',
+                  font: { size: 14 }
+                }
+              }
+            },
+            scales: {
+              x: {
+                grid: { display: false }
+              },
+              y: {
+                type: 'linear',
+                position: 'left',
+                suggestedMin: 0,
+                suggestedMax: 35,
+                title: {
+                  display: true,
+                  text: '기온 (℃)'
+                },
+                grid: { display: false }
+              },
+              y1: {
+                type: 'linear',
+                position: 'right',
+                max: 10,
+                title: {
+                  display: true,
+                  text: '우울지수 (10점 만점)'
+                },
+                grid: { drawOnChartArea: false }
+              }
+            }
+          }
+        });
+      });
+  </script>
+</body>
+</html>

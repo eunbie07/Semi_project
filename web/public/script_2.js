@@ -18,6 +18,7 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
 // ---------------------- 탭 전환 ----------------------
 function showTab(tabId) {
   const tabs = document.querySelectorAll('.tab');
@@ -40,7 +41,21 @@ function showTab(tabId) {
     };
     tryDraw();
   }
+
+  // ✅ 여기에 추가
+  if (tabId === 'breakfast_region') {
+    const tryDraw = () => {
+      if (window.kakao && window.kakao.maps && window.kakaoMapsLoaded) {
+        const year = parseInt(document.getElementById("breakfast_map_year").value) || 2024;
+        drawBreakfastMap(year);
+      } else {
+        setTimeout(tryDraw, 100);
+      }
+    };
+    tryDraw();
+  }
 }
+
 
 // ---------------------- 우울감 데이터 불러오기 ----------------------
 async function getDepression() {
@@ -217,6 +232,7 @@ function drawStressMap(year = 2024) {
   });
 }
 
+
 function addMarker({ region, lat, lng, stress_rate }, color, map, zIndex = 1) {
   const markerHtml = `
     <div class="marker-label" style="background:${color}; text-align:center;">
@@ -294,4 +310,89 @@ if (typeof showTab === "function") {
       loadStressDonut(chartSelect.value);
     }
   };
+}
+
+
+
+function updateBreakfastMapByYear() {
+  const year = parseInt(document.getElementById("breakfast_map_year").value);
+  if (isNaN(year) || year < 2015 || year > 2024) {
+    alert("2015년부터 2024년까지의 연도만 입력 가능합니다.");
+    return;
+  }
+  drawBreakfastMap(year);
+}
+
+function drawBreakfastMap(year = 2024) {
+  const regionCoords = {
+    "서울": [126.9780, 37.5665], "부산": [129.0756, 35.1796],
+    "대구": [128.6014, 35.8714], "인천": [126.7052, 37.4563],
+    "광주": [126.8514, 35.1600], "대전": [127.3845, 36.3504],
+    "울산": [129.3114, 35.5384], "세종": [127.2891, 36.4800],
+    "경기": [127.5183, 37.4138], "강원": [128.3115, 37.8228],
+    "충북": [127.4914, 36.6358], "충남": [126.8635, 36.5184],
+    "전북": [127.1088, 35.8218], "전남": [126.4629, 34.8161],
+    "경북": [128.8889, 36.4919], "경남": [128.2132, 35.4606],
+    "제주": [126.5312, 33.4996]
+  };
+
+  const map = new kakao.maps.Map(document.getElementById('breakfast_map'), {
+    center: new kakao.maps.LatLng(36.5, 128.3),
+    level: 14
+  });
+
+  const promises = Object.entries(regionCoords).map(async ([region, [lng, lat]]) => {
+    const res = await fetch(`http://192.168.1.23:3001/breakfast_region?region=${region}&year=${year}`);
+    const data = await res.json();
+    return { region, lat, lng, breakfast_rate: data?.breakfast_rate ?? null };
+  });
+
+  Promise.all(promises).then(results => {
+    const validData = results.filter(r => r.breakfast_rate !== null);
+    const top3Regions = validData
+      .sort((a, b) => b.breakfast_rate - a.breakfast_rate)
+      .slice(0, 3)
+      .map(r => r.region);
+
+    // Top 3 빨강
+    top3Regions.forEach(topRegion => {
+      const topData = validData.find(d => d.region === topRegion);
+      if (topData) addBreakfastMarker(topData, "#EF4444", map, 100);
+    });
+
+    // 나머지 녹색
+    validData
+      .filter(d => !top3Regions.includes(d.region))
+      .forEach(data => addBreakfastMarker(data, "#22C55E", map, 1));
+  });
+}
+
+function addBreakfastMarker({ region, lat, lng, breakfast_rate }, color, map, zIndex = 1) {
+  const markerHtml = `
+    <div class="marker-label" style="background:${color}; text-align:center;">
+      <div style="font-size:12px; font-weight:bold;">${region}</div>
+      <div>${breakfast_rate}%</div>
+    </div>
+  `;
+
+  const marker = new kakao.maps.CustomOverlay({
+    position: new kakao.maps.LatLng(lat, lng),
+    content: markerHtml,
+    yAnchor: 1,
+    zIndex: zIndex
+  });
+
+  marker.setMap(map);
+}
+
+if (tabId === 'breakfast_region') {
+  const tryDraw = () => {
+    if (window.kakao && window.kakao.maps && window.kakaoMapsLoaded) {
+      const year = parseInt(document.getElementById("breakfast_map_year").value) || 2024;
+      drawBreakfastMap(year);
+    } else {
+      setTimeout(tryDraw, 100);
+    }
+  };
+  tryDraw();
 }
