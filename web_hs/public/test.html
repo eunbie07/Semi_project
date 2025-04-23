@@ -4,163 +4,40 @@
   <meta charset="UTF-8" />
   <title>정신건강 자가진단</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: 'Noto Sans KR', sans-serif;
-      background: linear-gradient(to right, #f8fbff, #e6f0fa);
-      margin: 0;
-      padding: 0;
-    }
-
-    .menu-toggle {
-      position: fixed;
-      top: 50px;
-      left: 20px;
-      width: 30px;
-      height: 22px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      cursor: pointer;
-      z-index: 1001;
-    }
-
-    .menu-toggle span {
-      height: 4px;
-      background: #111;
-      border-radius: 2px;
-    }
-
-    .sidebar {
-      position: fixed;
-      top: 0;
-      left: -260px;
-      width: 240px;
-      height: 100%;
-      background: #f5f5f5;
-      box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
-      padding: 2rem 1.5rem;
-      transition: left 0.3s ease;
-      z-index: 1000;
-    }
-    .sidebar.active { left: 0; }
-    .sidebar h2 {
-      font-size: 1.2rem;
-      margin-top: 70px;
-      margin-bottom: 2rem;
-      text-align: left;
-    }
-    .sidebar h2 a {
-        text-decoration: none;
-        color: inherit;
-    }
-    .sidebar h2 a:visited,
-    .sidebar h2 a:hover,
-    .sidebar h2 a:active {
-        color: inherit;
-    }
-    .sidebar ul { list-style: none; }
-    .sidebar ul li { margin-bottom: 1.2rem; }
-    .sidebar ul li a {
-      text-decoration: none;
-      color: #111;
-      font-size: 1rem;
-      font-weight: 500;
-      cursor: pointer;
-    }
-
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      margin-top: 80px;
-    }
-
-    h2 {
-      text-align: center;
-      color: #2c3e50;
-      margin-bottom: 25px;
-    }
-
-    #quiz-container p {
-      font-size: 18px;
-      margin-bottom: 20px;
-      font-weight: 500;
-    }
-
-    button {
-      display: block;
-      width: 100%;
-      margin: 8px 0;
-      padding: 12px;
-      background-color: #3498db;
-      color: white;
-      font-weight: bold;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    button:hover {
-      background-color: #2980b9;
-    }
-
-    #progress-wrapper {
-      margin-top: 30px;
-    }
-
-    #progress-text {
-      font-weight: bold;
-      margin-bottom: 6px;
-      display: block;
-    }
-
-    #progress-bar {
-      height: 10px;
-      background-color: #27ae60;
-      transition: width 0.3s;
-    }
-
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <!-- 햄버거 버튼 -->
-  <div class="menu-toggle" id="menuToggle">
-    <span></span><span></span><span></span>
-  </div>
-
-  <!-- 사이드바 -->
-  <nav class="sidebar" id="sidebar">
-    <h2><a href="homepage.html">Home</a></h2>
-    <ul>
-      <li><a href="#" onclick="showTab('home')">스마트폰 & 정서 분석</a></li>
-      <li><a href="test.html">정신 건강 테스트</a></li>
-      <li><a onclick="showTab('depression')">내 또래 우울감</a></li>
-      <li><a onclick="showTab('depression_graph')">우울감 경험률 그래프</a></li>
-      <li><a onclick="showTab('smartphone')">스마트폰 사용 비교</a></li>
-      <li><a onclick="showTab('tips')">정신건강 꿀팁</a></li>
-      <li><a onclick="showTab('smartphone_badeffect')">스마트폰의 부정적영향</a></li>
-      <li><a onclick="showTab('stress_issues')">청소년 최대 고민은?</a></li>
-      <li><a onclick="showTab('stress_region')">지역별 스트레스 지도</a></li>
-      <li><a onclick="showTab('stress_chart')">청소년 스트레스 차트</a></li>
-    </ul>
-  </nav>
+<body class="test-page">
+  
+    <header>  
+        <nav class="navbar">
+            <div class="nav-inner">
+                <div class="logo">
+                    <a href="homepage.html">
+                      <img src="/web_hs/public/assets/logo.jpg" alt="Logo" />
+                    </a>
+                  </div>
+              <ul class="menu">
+                <li><a href="weather.html">날씨 감정 그래프</a></li>
+                <li><a href="test.html">정신 검사 테스트</a></li>
+                <li><a href="#">우울감</a></li>
+                <li><a href="#">통계</a></li>
+                <li><a href="#">지도</a></li>
+                <li><a href="quiz_menu.html">Quiz</a></li>
+                <li><a href="#">Biorthythm</a></li>
+              </ul>
+            </div>
+          </nav>
+      </header>
 
   <!-- 본문 -->
-  <div class="container">
+  <div class="test-page-container">
     <h2>📊 나는 정서 위험 상태일까?</h2>
     <div id="quiz-container">
       <p id="question">질문이 여기에 표시됩니다</p>
-      <button onclick="answer(4)">매우 그렇다</button>
-      <button onclick="answer(3)">그렇다</button>
-      <button onclick="answer(2)">아니다</button>
-      <button onclick="answer(1)">매우 아니다</button>
+      <button class="quiz-btn" onclick="answer(4)">매우 그렇다</button>
+      <button class="quiz-btn" onclick="answer(3)">그렇다</button>
+      <button class="quiz-btn" onclick="answer(2)">아니다</button>
+      <button class="quiz-btn" onclick="answer(1)">매우 아니다</button>
 
       <div id="progress-wrapper">
         <span id="progress-text">0%</span>
@@ -174,11 +51,6 @@
   </div>
 
   <script>
-    // 사이드바 토글
-    document.getElementById("menuToggle").addEventListener("click", function () {
-      document.getElementById("sidebar").classList.toggle("active");
-    });
-
     // 퀴즈 로직
     const questions = [
       "요즘 들어 이유 없이 슬프거나 허무함을 느끼나요?",
@@ -216,7 +88,7 @@
 
     function showResult() {
       questionEl.style.display = "none";
-      document.querySelectorAll("button").forEach(btn => btn.style.display = "none");
+      document.querySelectorAll(".quiz-btn").forEach(btn => btn.style.display = "none");
       progressText.style.display = "none";
       progressBar.style.display = "none";
 

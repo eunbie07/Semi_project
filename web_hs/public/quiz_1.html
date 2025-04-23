@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>나의 스마트폰 사용 습관</title>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="smartphone-quiz-page">
+
+    <header>  
+        <nav class="navbar">
+            <div class="nav-inner">
+                <div class="logo">
+                    <a href="homepage.html">
+                      <img src="/web_hs/public/assets/logo.jpg" alt="Logo" />
+                    </a>
+                  </div>
+              <ul class="menu">
+                <li><a href="weather.html">날씨 감정 그래프</a></li>
+                <li><a href="test.html">정신 검사 테스트</a></li>
+                <li><a href="#">우울감</a></li>
+                <li><a href="#">통계</a></li>
+                <li><a href="#">지도</a></li>
+                <li><a href="quiz_menu.html">Quiz</a></li>
+                <li><a href="#">Biorthythm</a></li>
+              </ul>
+            </div>
+          </nav>
+      </header>
+
+<div class="quiz-box fade-in">
+  <h2>🌙 잠자기 전 스마트폰 얼마나 쓰시나요?</h2>
+  <form id="quizForm">
+    <div id="options">
+      <label class="option">
+        <input type="radio" name="usage" value="1">
+        5분 이내
+      </label>
+      <label class="option">
+        <input type="radio" name="usage" value="2">
+        5~15분
+      </label>
+      <label class="option">
+        <input type="radio" name="usage" value="3">
+        15~30분
+      </label>
+      <label class="option">
+        <input type="radio" name="usage" value="4">
+        30~60분
+      </label>
+      <label class="option">
+        <input type="radio" name="usage" value="5">
+        1시간 이상
+      </label>
+    </div>
+    <button type="button" onclick="calculateScore()">결과 보기</button>
+  </form>
+
+  <div id="result" class="fade-in"></div>
+</div>
+
+<script>
+function calculateScore() {
+  const selected = document.querySelector('input[name="usage"]:checked');
+  const resultDiv = document.getElementById("result");
+  const optionsDiv = document.getElementById("options");
+  const button = document.querySelector('button'); // 버튼 요소 선택
+
+  if (!selected) {
+    resultDiv.innerText = "하나를 선택해주세요 🌱";
+    return;
+  }
+
+  const score = parseInt(selected.value);
+  let message = "";
+
+  if (score <= 2) {
+    message = "💡 스마트폰 사용이 건강한 편이에요. 잘 하고 있어요!";
+  } else if (score <= 4) {
+    message = "🌥️ 약간의 주의가 필요해요. 조금씩 줄여봐요.";
+  } else {
+    message = "⚠️ 과의조 위험! 자름기 1시간 전에는 스마트폰을 멀리해요.";
+  }
+
+  optionsDiv.style.display = "none";
+  button.style.display = "none"; // 버튼 숨기기
+
+  resultDiv.innerText = `✨ 당신의 점수는 ${score}/5점입니다.\n${message}`;
+}
+</script>
+
+</body>
+</html>
