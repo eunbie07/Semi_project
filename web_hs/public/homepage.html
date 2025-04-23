@@ -9,6 +9,7 @@
   <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=YOUR_KEY&autoload=false&libraries=services"></script>
   <script defer src="stress_map.js"></script>
   <script defer src="weather.js"></script>
+  <script defer src="bio.js"></script>
 
 </head>
 <body>
@@ -112,9 +113,23 @@
   
   </script>
 
-  <section id="stats" class="full-section home-hero bg-white">
-    <h2>Biorthythm</h2>
-    <p></p>
+  <section id="bio" class="full-section home-hero bg-white">
+    <div id="bio-container"></div>
   </section>
+  
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      fetch("bio.html")
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById("bio-container").innerHTML = html;
+        });
+    });
+  </script>
+  
+  
+  
+
+  
 </body>
 </html>
