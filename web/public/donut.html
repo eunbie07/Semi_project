@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lighthouse Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: sans-serif;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .score-card {
+      background: #222;
+      padding: 1rem;
+      border-radius: 12px;
+      text-align: center;
+    }
+    canvas {
+      max-width: 120px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>⚡ Performance</h1>
+  <div class="container">
+    <div class="score-card">
+      <h2>Desktop</h2>
+      <canvas id="desktopPerformance"></canvas>
+    </div>
+    <div class="score-card">
+      <h2>Mobile</h2>
+      <canvas id="mobilePerformance"></canvas>
+    </div>
+  </div>
+
+  <script>
+    function createChart(ctxId, score) {
+      new Chart(document.getElementById(ctxId), {
+        type: 'doughnut',
+        data: {
+          datasets: [{
+            data: [score, 100 - score],
+            backgroundColor: [score < 50 ? 'red' : score < 90 ? 'orange' : 'green', '#333'],
+            borderWidth: 0
+          }]
+        },
+        options: {
+          cutout: '70%',
+          plugins: {
+            tooltip: { enabled: false },
+            legend: { display: false },
+            title: {
+              display: true,
+              text: score,
+              color: 'white',
+              font: { size: 24 }
+            }
+          }
+        }
+      });
+    }
+
+    createChart('desktopPerformance', 24);
+    createChart('mobilePerformance', 20);
+  </script>
+</body>
+</html>
