@@ -117,20 +117,21 @@
                 homepage.style.display = "block";
                 window.scrollTo(0, 0);
   
-                // ✅ intro 실행 완료 기록
-                localStorage.setItem("introPlayed", "true");
+                // ✅ intro 한 번 봤다고 기록
+                localStorage.setItem("introSeen", "true");
+                sessionStorage.setItem("introPlayed", "true");
               });
           }, 1500);
         }, 200);
       }, 3000);
     }
   
-    // ✅ 로딩 여부 확인 후 자동 분기
     window.addEventListener("DOMContentLoaded", () => {
-      const alreadyPlayed = localStorage.getItem("introPlayed");
+      const hasSeenIntro = localStorage.getItem("introSeen") === "true";
+      const sessionIntroPlayed = sessionStorage.getItem("introPlayed") === "true";
   
-      if (alreadyPlayed === "true") {
-        // ✅ 바로 homepage 로드
+      if (hasSeenIntro && sessionIntroPlayed) {
+        // ✅ 한 번 본 적 있고, 현재 탭에서도 이미 실행했다면 → 바로 homepage
         document.getElementById("intro").style.display = "none";
         fetch("homepage.html")
           .then(res => res.text())
@@ -141,7 +142,7 @@
             window.scrollTo(0, 0);
           });
       } else {
-        // ✅ 클릭 또는 터치로 시작
+        // ✅ 아직 이 탭에서는 intro 실행 안 했으면 → 클릭/터치 대기
         document.getElementById("intro").addEventListener("click", startLoadingSequence);
         document.getElementById("intro").addEventListener("touchstart", startLoadingSequence);
       }
