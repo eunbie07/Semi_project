@@ -1,155 +1,24 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>나의 스마트폰 사용 습관</title>
-  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Gowun Dodum', sans-serif;
-      background: linear-gradient(145deg, #fcefee, #f5f9ff);
-      margin: 0;
-      padding: 30px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    .quiz-box {
-      background: #ffffffdd;
-      border-radius: 20px;
-      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
-      padding: 40px;
-      max-width: 500px;
-      width: 100%;
-      transition: all 0.3s ease;
-    }
-
-    h2 {
-      text-align: center;
-      color: #444;
-      font-size: 24px;
-      margin-bottom: 30px;
-    }
-
-    .option {
-      display: flex;
-      align-items: center;
-      margin-bottom: 12px;
-      background-color: #f8f8f8;
-      border-radius: 10px;
-      padding: 10px;
-      transition: background 0.2s ease;
-      cursor: pointer;
-    }
-
-    .option:hover {
-      background-color: #e6f0ff;
-    }
-
-    .option input {
-      margin-right: 10px;
-      transform: scale(1.2);
-    }
-
-    button {
-      background-color: #b957d9;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      font-size: 16px;
-      border-radius: 12px;
-      width: 100%;
-      margin-top: 20px;
-      transition: background 0.3s ease;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #db8cf6;
-    }
-
-    #result {
-      margin-top: 30px;
-      text-align: center;
-      font-size: 18px;
-      color: #444;
-      white-space: pre-wrap;
-    }
-
-    .fade-in {
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
-</head>
-<body>
-
 <div class="quiz-box fade-in">
   <h2>🌙 잠자기 전 스마트폰 얼마나 쓰시나요?</h2>
   <form id="quizForm">
     <div id="options">
       <label class="option">
-        <input type="radio" name="usage" value="1">
-        5분 이내
+        <input type="radio" name="usage" value="1"> 5분 이내
       </label>
       <label class="option">
-        <input type="radio" name="usage" value="2">
-        5~15분
+        <input type="radio" name="usage" value="2"> 5~15분
       </label>
       <label class="option">
-        <input type="radio" name="usage" value="3">
-        15~30분
+        <input type="radio" name="usage" value="3"> 15~30분
       </label>
       <label class="option">
-        <input type="radio" name="usage" value="4">
-        30~60분
+        <input type="radio" name="usage" value="4"> 30~60분
       </label>
       <label class="option">
-        <input type="radio" name="usage" value="5">
-        1시간 이상
+        <input type="radio" name="usage" value="5"> 1시간 이상
       </label>
     </div>
-    <button type="button" onclick="calculateScore()">결과 보기</button>
+    <button type="button" id="resultBtn">결과 보기</button>
   </form>
-
   <div id="result" class="fade-in"></div>
 </div>
-
-<script>
-function calculateScore() {
-  const selected = document.querySelector('input[name="usage"]:checked');
-  const resultDiv = document.getElementById("result");
-  const optionsDiv = document.getElementById("options");
-  const button = document.querySelector('button'); // 버튼 요소 선택
-
-  if (!selected) {
-    resultDiv.innerText = "하나를 선택해주세요 🌱";
-    return;
-  }
-
-  const score = parseInt(selected.value);
-  let message = "";
-
-  if (score <= 2) {
-    message = "💡 스마트폰 사용이 건강한 편이에요. 잘 하고 있어요!";
-  } else if (score <= 4) {
-    message = "🌥️ 약간의 주의가 필요해요. 조금씩 줄여봐요.";
-  } else {
-    message = "⚠️ 과의존 위험! 잠들기 1시간 전에는 스마트폰을 멀리해요.";
-  }
-
-  optionsDiv.style.display = "none";
-  button.style.display = "none"; // 버튼 숨기기
-
-  resultDiv.innerText = `✨ 당신의 점수는 ${score}/5점입니다.\n${message}`;
-}
-</script>
-
-</body>
-</html>

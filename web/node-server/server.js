@@ -98,6 +98,6 @@ app.get('/api/stress_issues', async (req, res) => {
 });
 
 
-app.listen(8000, function() {
-  console.log("8000 port : Server Started~!!");
+app.listen(80, '0.0.0.0', function() {
+  console.log("80 port : Server Started~!!");
 })

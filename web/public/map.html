@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>지역별 스트레스 및 아침결식률 지도</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=54bddc113d6d9d4f81582fd0de39cef0&autoload=false&libraries=services"></script>
+  <script defer src="stress_map.js"></script>
+</head>
+<body>
+  <div class="map-section-container">
+    <div class="map-section">
+      <h2>지역별 스트레스 지수 지도</h2>
+      <label for="map_year">연도 선택:</label>
+      <select id="map_year" name="map_year" style="width: 120px;">
+        <option value="" disabled>연도 선택</option>
+        <option value="2015">2015년</option>
+        <option value="2016">2016년</option>
+        <option value="2017">2017년</option>
+        <option value="2018">2018년</option>
+        <option value="2019">2019년</option>
+        <option value="2020">2020년</option>
+        <option value="2021">2021년</option>
+        <option value="2022">2022년</option>
+        <option value="2023">2023년</option>
+        <option value="2024" selected>2024년</option>
+      </select>
+      <button onclick="updateMapByYear()">📍 지도 조회하기</button>
+      <div id="map" class="map-box"></div>
+    </div>
+
+    <div class="map-section">
+      <h2>지역별 아침결식률 지도</h2>
+      <label for="breakfast_map_year">연도 선택:</label>
+      <select id="breakfast_map_year" name="breakfast_map_year" style="width: 120px;">
+        <option value="" disabled>연도 선택</option>
+        <option value="2015">2015년</option>
+        <option value="2016">2016년</option>
+        <option value="2017">2017년</option>
+        <option value="2018">2018년</option>
+        <option value="2019">2019년</option>
+        <option value="2020">2020년</option>
+        <option value="2021">2021년</option>
+        <option value="2022">2022년</option>
+        <option value="2023">2023년</option>
+        <option value="2024" selected>2024년</option>
+      </select>
+      <button onclick="updateBreakfastMapByYear()">📍 지도 조회하기</button>
+      <div id="breakfast_map" class="map-box"></div>
+    </div>
+  </div>      
+</body>
+</html>

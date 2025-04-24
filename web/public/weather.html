@@ -2,37 +2,14 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>감성 날씨 우울지수 차트</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <style>
-    body {
-      font-family: 'Nanum Gothic', sans-serif;
-      background: white;
-      color: #333;
-      margin: 0;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    h2 {
-      font-size: 1.8em;
-      margin-bottom: 20px;
-      color: #444;
-    }
-
-    canvas {
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .message {
-      font-size: 1.2em;
-      margin-top: 12px;
-      color: #666;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
 </head>
-<body>
+<body class="weather-page">
+
   <h2>Depression & Weather</h2>
   <canvas id="weatherChart" width="800" height="300"></canvas>
   <p id="bestTimeMessage" class="message"></p>
@@ -43,18 +20,13 @@
     const serviceKey = "89mzRrYVPoIjA0HWVA%2FtiFPmvByqnXJFK8acRZ9tVXmETXDcn%2FQq0LmCwdO%2B5H%2F4q4G6Emy3NFG2bLbk8pxoPQ%3D%3D";
     const today = new Date();
     const baseDate = today.toISOString().slice(0,10).replace(/-/g, '');
-    const baseTime = "0500";
-    const nx = 60, ny = 127;
-
-    const url = `https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst?serviceKey=${serviceKey}&pageNo=1&numOfRows=1000&dataType=JSON&base_date=${baseDate}&base_time=${baseTime}&nx=${nx}&ny=${ny}`;
+    const url = `https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst?serviceKey=${serviceKey}&pageNo=1&numOfRows=1000&dataType=JSON&base_date=${baseDate}&base_time=0500&nx=60&ny=127`;
 
     fetch(url)
       .then(res => res.json())
       .then(data => {
         const items = data.response.body.items.item;
-        const hours = [];
-        const tempList = [], depressionScores = [], moodEmojis = [];
-
+        const hours = [], tempList = [], depressionScores = [], moodEmojis = [];
         const tempMap = {}, skyMap = {}, popMap = {};
 
         items.forEach(item => {
@@ -66,9 +38,7 @@
 
         for (const time in tempMap) {
           const hourInt = parseInt(time.slice(0, 2));
-          const ampmHour = (hourInt % 12 === 0 ? 12 : hourInt % 12);
-          const period = hourInt < 12 ? "AM" : "PM";
-          const hourLabel = `${ampmHour} ${period}`;
+          const hourLabel = `${hourInt % 12 === 0 ? 12 : hourInt % 12} ${hourInt < 12 ? "AM" : "PM"}`;
 
           const temp = tempMap[time];
           const sky = skyMap[time] || 1;
@@ -97,25 +67,16 @@
         }
 
         const maxTemp = Math.max(...tempList);
-        const bestIndex = tempList.indexOf(maxTemp);
-        const bestTime = hours[bestIndex];
+        const bestTime = hours[tempList.indexOf(maxTemp)];
+        const lightestTime = hours[depressionScores.indexOf(Math.min(...depressionScores))];
+        const heaviestTime = hours[depressionScores.indexOf(Math.max(...depressionScores))];
 
-        const minDep = Math.min(...depressionScores);
-        const bestMoodIndex = depressionScores.indexOf(minDep);
-        const lightestTime = hours[bestMoodIndex];
+        document.getElementById("bestTimeMessage").innerText = `🌤️ 오늘 가장 기온이 높은 시간은 ${bestTime} 입니다!`;
+        document.getElementById("lightestMoodMessage").innerText = `😊 가장 마음이 가벼운 시간은 ${lightestTime} 입니다!`;
+        document.getElementById("heaviestMoodMessage").innerText = `😟 가장 마음이 무거운 시간은 ${heaviestTime} 입니다!`;
 
-        const maxDep = Math.max(...depressionScores);
-        const worstMoodIndex = depressionScores.indexOf(maxDep);
-        const heaviestTime = hours[worstMoodIndex];
-
-        document.getElementById("bestTimeMessage").innerText =
-          `🌤️ 오늘 가장 기온이 높은 시간은 ${bestTime} 입니다!`;
-        document.getElementById("lightestMoodMessage").innerText =
-          `😊 가장 마음이 가벼운 시간은 ${lightestTime} 입니다!`;
-        document.getElementById("heaviestMoodMessage").innerText =
-          `😟 가장 마음이 무거운 시간은 ${heaviestTime} 입니다!`;
-
-        new Chart(document.getElementById('weatherChart'), {
+        const ctx = document.getElementById('weatherChart').getContext('2d');
+        new Chart(ctx, {
           type: 'line',
           data: {
             labels: hours,
@@ -147,16 +108,18 @@
           options: {
             responsive: true,
             plugins: {
+              datalabels: {
+                display: () => false // ✅ 완벽히 비활성화
+              },
               tooltip: {
                 callbacks: {
                   label: function(context) {
                     const label = context.dataset.label || '';
                     const value = context.raw;
                     const index = context.dataIndex;
-                    if (label.includes("우울지수")) {
-                      return `${label}: ${value} (${moodEmojis[index]})`;
-                    }
-                    return `${label}: ${value}℃`;
+                    return label.includes("우울지수")
+                      ? `${label}: ${value} (${moodEmojis[index]})`
+                      : `${label}: ${value}℃`;
                   }
                 }
               },
@@ -168,9 +131,7 @@
               }
             },
             scales: {
-              x: {
-                grid: { display: false }
-              },
+              x: { grid: { display: false } },
               y: {
                 type: 'linear',
                 position: 'left',
@@ -193,7 +154,8 @@
                 grid: { drawOnChartArea: false }
               }
             }
-          }
+          },
+          plugins: [ChartDataLabels]  // ⛔ 전역 등록 없이 이 차트에만 적용
         });
       });
   </script>

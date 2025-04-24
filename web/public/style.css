@@ -1,71 +1,838 @@
-/* 기본 초기화 */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html, body {
-    width: 100%;
-    height: 100%;
-    font-family: sans-serif;
-    background-color: #0e0f13;
-    transition: background-color 1s ease, opacity 1s ease;
-    overflow: hidden;
-  }
-  
-  /* 초기 인트로 */
-  #intro {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #0e0f13;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-    transition: opacity 1s ease;
-  }
-  
-  #phone {
-    width: 600px;
-    max-width: 90vw;
-    cursor: pointer;
-    transition: transform 1.2s ease, opacity 1s ease;
-  }
-  
-  #phone.zoomed {
-    transform: scale(6);
-    opacity: 0;
-    transition: transform 1.2s ease, opacity 1s ease;
-  }
-  
-  body.transitioning {
-    background-color: white;
-    transition: background-color 0.1s ease;
-  }
-  
-  
-  /* homepage 기본 상태 */
-  #homepage {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: left 1s ease, opacity 1s ease;
-    background-color: white;
-    color: #111;
-    z-index: 1;
-  }
-  
-  /* homepage 등장 */
-  #homepage.active {
-    left: 0;
+#intro {
+  height: 100vh; /* 화면 전체 높이 */
+  display: flex;
+  justify-content: center; /* 가로 중앙 */
+  align-items: center;     /* 세로 중앙 */
+  background-color: #f5f5f7; /* 배경색 (선택) */
+}
+
+#phone {
+  width: 600px;
+  height: auto;
+}
+
+#phone.zoomed {
+  animation: zoomFade 1.5s ease forwards;
+}
+
+@keyframes zoomFade {
+  0% {
+    transform: scale(1);
     opacity: 1;
   }
-  
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+html {
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html, body {
+  scroll-snap-type: y mandatory;
+  height: 100%;
+  overflow-y: scroll;
+  margin: 0;
+  padding: 0;
+}
+
+.full-section {
+  scroll-snap-align: start;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f5f5f7;
+  color: #1d1d1f;
+  text-align: center;
+  overflow-y: auto;
+  scrollbar-width: none;       
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;               
+}
+
+.home-hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+}
+
+.navbar {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 1000;
+  padding: 10px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: center; /* ✅ 여전히 유지 */
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; /* 중앙 정렬 */
+  align-items: center;
+  gap: 50px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+
+.menu li a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 300;
+}
+
+
+.buttons {
+  margin-bottom: 40px;
+}
+
+.btn {
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.blue {
+  background-color: #0071e3;
+  color: white;
+}
+
+.btn.outline {
+  border: 1px solid #0071e3;
+  color: #0071e3;
+  background-color: transparent;
+}
+
+.section {
+  width: 100vw;
+  padding: 100px 0;
+  text-align: center;
+  margin: 0;
+}
+
+.full-section {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.bg-gray {
+  background-color: #f5f5f7;
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.logo img {
+  width: 24px;
+  height: auto;
+}
+
+.logo span {
+  display: inline-block;
+  font-size: 16px;
+  color: #333;
+}
+
+
+.test-page-container {
+  max-width: 1000px;         /* ✅ 더 넓게 */
+  width: 100%;               /* ✅ 강제 전체 너비 */
+  padding: 50px;             /* ✅ 내부 여백 넉넉하게 */
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 20px;
+  margin: 60px auto;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+
+
+.test-page h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 25px;
+}
+
+.test-page #quiz-container p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.test-page .quiz-btn {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.test-page .quiz-btn:hover {
+  background-color: #2980b9;
+}
+
+#progress-wrapper {
+  margin-top: 30px;
+}
+
+.test-page #progress-text {
+  font-weight: bold;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.test-page #progress-bar {
+  height: 10px;
+  background-color: #27ae60;
+  transition: width 0.3s;
+}
+
+/* quiz_menu css */
+
+.quiz-menu-page .menu-box {
+  text-align: center;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-menu-page h1 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+.quiz-menu-page .quiz-button {
+  display: block;
+  width: 280px;
+  margin: 10px auto;
+  padding: 15px;
+  font-size: 16px;
+  background-color: #595757;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  white-space: nowrap;
+  text-decoration: none;
+  text-align: center;
+}
+
+.quiz-menu-page .quiz-button:hover {
+  background-color: #b957d9;
+}
+
+section#quiz {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #e0f7fa, #fce4ec);
+  padding: 60px 0;
+  box-sizing: border-box;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.smartphone-quiz-page,
+.smartphone-quiz-multi-page,
+.quiz-menu-page {
+  font-family: 'Gowun Dodum', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.quiz-box,
+.menu-box {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.quiz-box h2,
+.question-title,
+.menu-box h1 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.option:hover {
+  background-color: #e6f0ff;
+}
+
+.option input {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+button,
+.quiz-button {
+  background-color: #595757;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 12px;
+  width: 100%;
+  margin-top: 20px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button:hover,
+.quiz-button:hover {
+  background-color: #b957d9;
+}
+
+#menu-result {
+  background-color: #fff;
+  color: black;
+  padding: 40px;
+  margin-top: 40px;
+  font-size: 18px;
+  min-height: 200px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: block !important;  /* ✅ 혹시 JS에서 숨겼을 경우 강제 표시 */
+}
+
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* quiz_1 & quiz_2 */
+
+.smartphone-quiz-page,
+.smartphone-quiz-multi-page,
+.quiz-menu-page {
+  font-family: 'Gowun Dodum', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 60px 0;
+}
+
+.quiz-box,
+.menu-box {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.quiz-box h2,
+.question-title,
+.menu-box h1 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.option:hover {
+  background-color: #e6f0ff;
+}
+
+.option input {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+button,
+.quiz-button {
+  background-color: #595757;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 12px;
+  width: 100%;
+  margin-top: 20px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button:hover,
+.quiz-button:hover {
+  background-color: #b957d9;
+}
+
+#quiz-result {
+  margin-top: 30px;
+  font-size: 18px;
+  color: #444;
+  white-space: pre-wrap;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ====== Weather Chart Page ====== */
+.weather-page {
+  font-family: 'Nanum Gothic', sans-serif;
+  background: white;
+  color: #333;
+  margin: 0;
+  padding: 0px 0 40px;         
+  text-align: center;
+}
+
+.weather-page h2 {
+  font-size: 1.8em;
+  margin-top: 80px;
+  margin-bottom: 60px;          
+  color: #444;
+}
+
+.weather-page canvas {
+  max-width: 900px;
+  width: 100%;
+  height: 300px !important;     
+  margin: 0 auto 50px auto;     
+  display: block;
+}
+
+.weather-page .message {
+  font-size: 1.1em;
+  margin-top: 12px;
+  margin-bottom: 10px;          
+  color: #666;
+}
+
+.weather-section h2 {
+  font-size: 2em;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.weather-section canvas {
+  max-width: 800px;
+  width: 100%;
+  height: 300px;
+  margin: 0 auto 30px auto;
+  display: block;
+}
+
+.weather-section .message {
+  font-size: 1.2em;
+  margin: 8px 0;
+  color: #444;
+}
+
+/* home img */
+
+.home-hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.home-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.home-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  z-index: 2;
+  padding: 0 20px;
+}
+
+.home-text h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.home-text p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/* map.html */
+section#map {
+  scroll-snap-align: start;
+  background-color: #f5f5f7;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  box-sizing: border-box;
+  padding-top: 50px;
+}
+
+.map-section-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  background-color: transparent;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* ✅ 중앙 정렬 핵심! */
+  padding: 0 2rem;
+}
+
+.map-section {
+  flex: 1 1 48%;  /* ✅ 동일한 비율로 양쪽 균형 */
+  min-width: 460px;
+  max-width: 500px;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.map-box {
+  background-color: white;
+  width: 100%;
+  height: 350px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* bio css */
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;           /* 내부 요소들 간 여백 */
+  margin-bottom: 40px; /* 버튼 아래 공간 확보 */
+}
+
+.date-inputs {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.date-inputs label {
+  font-size: 16px;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#biorhythmChart {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 540px;
+  height: 360px;
+}
+
+/* === 우울감 경험률 비교 (depression_compare) === */
+#depression {
+  padding-top: 20px;  /* 또는 원하는 값, 예: 80px */
+}
+
+.depression-compare-section {
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Gowun Dodum', sans-serif;
+  background-color: #f5f5f7;
+  color: #333;
+}
+
+.depression-compare-section h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+#inputBox {
+  margin-bottom: 30px;
+}
+
+.input-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.input-row label {
+  font-size: 1rem;
+  margin-right: 6px;
+}
+
+.input-row select {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 160px;
+}
+
+#inputBox button {
+  margin-top: 16px;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 12px;
+  background-color: #595757;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#inputBox button:hover {
+  background-color: #b957d9;
+}
+
+#chartWrapper {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.chart-container {
+  max-width: 600px;
+  width: 100%;
+}
+
+canvas {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+#changeComment {
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: #444;
+  white-space: pre-line;
+}
+
+.depression-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  transform: translateX(30px);
+}
+
+.form-area {
+  flex: 1 1 300px;
+  min-width: 260px;
+}
+
+.graph-area {
+  flex: 1 1 600px;
+  text-align: center;
+}
+
+/* test quiz */
+.progress-outer {
+  background: #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 10px;
+  width: 100%;
+}
+
+#progress-bar {
+  height: 10px;
+  background-color: #27ae60;
+  width: 0%;
+  transition: width 0.3s;
+}
+
+/* scatter css */
+/* Scatter Section - 청소년 우울감 분석 */
+.scatter-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+  color: #333;
+  font-family: 'Apple SD Gothic Neo', sans-serif;
+  background-color: #ffffff;
+}
+
+.scatter-wrapper h1 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.graph-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
+  max-width: 1300px;
+  width: 100%;
+}
+
+.card {
+  width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  background-color: #fafafa;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.summary {
+  font-size: 15px;
+  max-width: 700px;
+  line-height: 1.6;
+}

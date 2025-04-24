@@ -1,0 +1,3152 @@
+[
+  {
+    "age": 14,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 16.8,
+    "year": 2020
+  },
+  {
+    "age": 14,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 39.0,
+    "year": 2020
+  },
+  {
+    "age": 14,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 23.9,
+    "year": 2020
+  },
+  {
+    "age": 14,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 10.1,
+    "year": 2020
+  },
+  {
+    "age": 14,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 10.3,
+    "year": 2020
+  },
+  {
+    "age": 15,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 9.8,
+    "year": 2020
+  },
+  {
+    "age": 15,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 35.6,
+    "year": 2020
+  },
+  {
+    "age": 15,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 28.9,
+    "year": 2020
+  },
+  {
+    "age": 15,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 11.7,
+    "year": 2020
+  },
+  {
+    "age": 15,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 14.1,
+    "year": 2020
+  },
+  {
+    "age": 16,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 7.4,
+    "year": 2020
+  },
+  {
+    "age": 16,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 31.2,
+    "year": 2020
+  },
+  {
+    "age": 16,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 30.8,
+    "year": 2020
+  },
+  {
+    "age": 16,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 14.0,
+    "year": 2020
+  },
+  {
+    "age": 16,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 16.7,
+    "year": 2020
+  },
+  {
+    "age": 17,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 8.6,
+    "year": 2020
+  },
+  {
+    "age": 17,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 34.5,
+    "year": 2020
+  },
+  {
+    "age": 17,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 30.5,
+    "year": 2020
+  },
+  {
+    "age": 17,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 12.6,
+    "year": 2020
+  },
+  {
+    "age": 17,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 13.8,
+    "year": 2020
+  },
+  {
+    "age": 18,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 7.4,
+    "year": 2020
+  },
+  {
+    "age": 18,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 31.5,
+    "year": 2020
+  },
+  {
+    "age": 18,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 32.0,
+    "year": 2020
+  },
+  {
+    "age": 18,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 13.8,
+    "year": 2020
+  },
+  {
+    "age": 18,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 15.2,
+    "year": 2020
+  },
+  {
+    "age": 19,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 8.2,
+    "year": 2020
+  },
+  {
+    "age": 19,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 32.4,
+    "year": 2020
+  },
+  {
+    "age": 19,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 31.1,
+    "year": 2020
+  },
+  {
+    "age": 19,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 12.8,
+    "year": 2020
+  },
+  {
+    "age": 19,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 15.4,
+    "year": 2020
+  },
+  {
+    "age": 14,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 21.8,
+    "year": 2020
+  },
+  {
+    "age": 14,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 42.8,
+    "year": 2020
+  },
+  {
+    "age": 14,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 20.1,
+    "year": 2020
+  },
+  {
+    "age": 14,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 8.3,
+    "year": 2020
+  },
+  {
+    "age": 14,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 7.0,
+    "year": 2020
+  },
+  {
+    "age": 15,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 13.2,
+    "year": 2020
+  },
+  {
+    "age": 15,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 40.5,
+    "year": 2020
+  },
+  {
+    "age": 15,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 26.9,
+    "year": 2020
+  },
+  {
+    "age": 15,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 9.0,
+    "year": 2020
+  },
+  {
+    "age": 15,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 10.4,
+    "year": 2020
+  },
+  {
+    "age": 16,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 10.5,
+    "year": 2020
+  },
+  {
+    "age": 16,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 36.3,
+    "year": 2020
+  },
+  {
+    "age": 16,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 29.3,
+    "year": 2020
+  },
+  {
+    "age": 16,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 10.6,
+    "year": 2020
+  },
+  {
+    "age": 16,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 13.2,
+    "year": 2020
+  },
+  {
+    "age": 17,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 11.6,
+    "year": 2020
+  },
+  {
+    "age": 17,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 39.5,
+    "year": 2020
+  },
+  {
+    "age": 17,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 27.6,
+    "year": 2020
+  },
+  {
+    "age": 17,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 10.0,
+    "year": 2020
+  },
+  {
+    "age": 17,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 11.3,
+    "year": 2020
+  },
+  {
+    "age": 18,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 9.3,
+    "year": 2020
+  },
+  {
+    "age": 18,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 35.9,
+    "year": 2020
+  },
+  {
+    "age": 18,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 29.6,
+    "year": 2020
+  },
+  {
+    "age": 18,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 12.3,
+    "year": 2020
+  },
+  {
+    "age": 18,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 12.9,
+    "year": 2020
+  },
+  {
+    "age": 19,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 10.2,
+    "year": 2020
+  },
+  {
+    "age": 19,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 35.4,
+    "year": 2020
+  },
+  {
+    "age": 19,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 29.1,
+    "year": 2020
+  },
+  {
+    "age": 19,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 11.4,
+    "year": 2020
+  },
+  {
+    "age": 19,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 13.9,
+    "year": 2020
+  },
+  {
+    "age": 14,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 11.5,
+    "year": 2020
+  },
+  {
+    "age": 14,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 35.0,
+    "year": 2020
+  },
+  {
+    "age": 14,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 27.7,
+    "year": 2020
+  },
+  {
+    "age": 14,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 12.1,
+    "year": 2020
+  },
+  {
+    "age": 14,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 13.7,
+    "year": 2020
+  },
+  {
+    "age": 15,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 6.2,
+    "year": 2020
+  },
+  {
+    "age": 15,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 30.5,
+    "year": 2020
+  },
+  {
+    "age": 15,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 30.9,
+    "year": 2020
+  },
+  {
+    "age": 15,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 14.5,
+    "year": 2020
+  },
+  {
+    "age": 15,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 17.9,
+    "year": 2020
+  },
+  {
+    "age": 16,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 4.2,
+    "year": 2020
+  },
+  {
+    "age": 16,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 25.8,
+    "year": 2020
+  },
+  {
+    "age": 16,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 32.3,
+    "year": 2020
+  },
+  {
+    "age": 16,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 17.5,
+    "year": 2020
+  },
+  {
+    "age": 16,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 20.2,
+    "year": 2020
+  },
+  {
+    "age": 17,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 5.6,
+    "year": 2020
+  },
+  {
+    "age": 17,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 29.2,
+    "year": 2020
+  },
+  {
+    "age": 17,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 33.4,
+    "year": 2020
+  },
+  {
+    "age": 17,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 15.4,
+    "year": 2020
+  },
+  {
+    "age": 17,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 16.3,
+    "year": 2020
+  },
+  {
+    "age": 18,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 5.4,
+    "year": 2020
+  },
+  {
+    "age": 18,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 26.9,
+    "year": 2020
+  },
+  {
+    "age": 18,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 34.6,
+    "year": 2020
+  },
+  {
+    "age": 18,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 15.4,
+    "year": 2020
+  },
+  {
+    "age": 18,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 17.7,
+    "year": 2020
+  },
+  {
+    "age": 19,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 6.1,
+    "year": 2020
+  },
+  {
+    "age": 19,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 29.3,
+    "year": 2020
+  },
+  {
+    "age": 19,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 33.2,
+    "year": 2020
+  },
+  {
+    "age": 19,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 14.3,
+    "year": 2020
+  },
+  {
+    "age": 19,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 17.1,
+    "year": 2020
+  },
+  {
+    "age": 14,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 16.8,
+    "year": 2021
+  },
+  {
+    "age": 14,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 39.9,
+    "year": 2021
+  },
+  {
+    "age": 14,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 24.2,
+    "year": 2021
+  },
+  {
+    "age": 14,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 9.2,
+    "year": 2021
+  },
+  {
+    "age": 14,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 9.8,
+    "year": 2021
+  },
+  {
+    "age": 15,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 10.0,
+    "year": 2021
+  },
+  {
+    "age": 15,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 37.8,
+    "year": 2021
+  },
+  {
+    "age": 15,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 29.1,
+    "year": 2021
+  },
+  {
+    "age": 15,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 11.9,
+    "year": 2021
+  },
+  {
+    "age": 15,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 11.2,
+    "year": 2021
+  },
+  {
+    "age": 16,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 7.6,
+    "year": 2021
+  },
+  {
+    "age": 16,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 33.3,
+    "year": 2021
+  },
+  {
+    "age": 16,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 31.6,
+    "year": 2021
+  },
+  {
+    "age": 16,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 13.5,
+    "year": 2021
+  },
+  {
+    "age": 16,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 14.0,
+    "year": 2021
+  },
+  {
+    "age": 17,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 7.4,
+    "year": 2021
+  },
+  {
+    "age": 17,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 33.8,
+    "year": 2021
+  },
+  {
+    "age": 17,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 30.9,
+    "year": 2021
+  },
+  {
+    "age": 17,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 13.4,
+    "year": 2021
+  },
+  {
+    "age": 17,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 14.4,
+    "year": 2021
+  },
+  {
+    "age": 18,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 5.8,
+    "year": 2021
+  },
+  {
+    "age": 18,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 31.0,
+    "year": 2021
+  },
+  {
+    "age": 18,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 32.1,
+    "year": 2021
+  },
+  {
+    "age": 18,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 14.1,
+    "year": 2021
+  },
+  {
+    "age": 18,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 17.0,
+    "year": 2021
+  },
+  {
+    "age": 19,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 5.9,
+    "year": 2021
+  },
+  {
+    "age": 19,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 28.3,
+    "year": 2021
+  },
+  {
+    "age": 19,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 29.8,
+    "year": 2021
+  },
+  {
+    "age": 19,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 16.2,
+    "year": 2021
+  },
+  {
+    "age": 19,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 19.8,
+    "year": 2021
+  },
+  {
+    "age": 14,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 21.2,
+    "year": 2021
+  },
+  {
+    "age": 14,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 43.6,
+    "year": 2021
+  },
+  {
+    "age": 14,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 20.6,
+    "year": 2021
+  },
+  {
+    "age": 14,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 7.3,
+    "year": 2021
+  },
+  {
+    "age": 14,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 7.4,
+    "year": 2021
+  },
+  {
+    "age": 15,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 13.0,
+    "year": 2021
+  },
+  {
+    "age": 15,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 43.5,
+    "year": 2021
+  },
+  {
+    "age": 15,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 26.3,
+    "year": 2021
+  },
+  {
+    "age": 15,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 9.1,
+    "year": 2021
+  },
+  {
+    "age": 15,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 8.1,
+    "year": 2021
+  },
+  {
+    "age": 16,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 9.9,
+    "year": 2021
+  },
+  {
+    "age": 16,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 38.8,
+    "year": 2021
+  },
+  {
+    "age": 16,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 28.5,
+    "year": 2021
+  },
+  {
+    "age": 16,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 11.2,
+    "year": 2021
+  },
+  {
+    "age": 16,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 11.6,
+    "year": 2021
+  },
+  {
+    "age": 17,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 9.5,
+    "year": 2021
+  },
+  {
+    "age": 17,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 38.5,
+    "year": 2021
+  },
+  {
+    "age": 17,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 28.7,
+    "year": 2021
+  },
+  {
+    "age": 17,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 11.4,
+    "year": 2021
+  },
+  {
+    "age": 17,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 11.9,
+    "year": 2021
+  },
+  {
+    "age": 18,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 7.5,
+    "year": 2021
+  },
+  {
+    "age": 18,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 35.0,
+    "year": 2021
+  },
+  {
+    "age": 18,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 30.5,
+    "year": 2021
+  },
+  {
+    "age": 18,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 12.1,
+    "year": 2021
+  },
+  {
+    "age": 18,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 14.9,
+    "year": 2021
+  },
+  {
+    "age": 19,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 6.8,
+    "year": 2021
+  },
+  {
+    "age": 19,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 31.3,
+    "year": 2021
+  },
+  {
+    "age": 19,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 28.6,
+    "year": 2021
+  },
+  {
+    "age": 19,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 14.5,
+    "year": 2021
+  },
+  {
+    "age": 19,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 18.7,
+    "year": 2021
+  },
+  {
+    "age": 14,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 12.2,
+    "year": 2021
+  },
+  {
+    "age": 14,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 36.1,
+    "year": 2021
+  },
+  {
+    "age": 14,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 28.0,
+    "year": 2021
+  },
+  {
+    "age": 14,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 11.3,
+    "year": 2021
+  },
+  {
+    "age": 14,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 12.4,
+    "year": 2021
+  },
+  {
+    "age": 15,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 6.9,
+    "year": 2021
+  },
+  {
+    "age": 15,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 31.9,
+    "year": 2021
+  },
+  {
+    "age": 15,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 32.0,
+    "year": 2021
+  },
+  {
+    "age": 15,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 14.9,
+    "year": 2021
+  },
+  {
+    "age": 15,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 14.4,
+    "year": 2021
+  },
+  {
+    "age": 16,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 5.1,
+    "year": 2021
+  },
+  {
+    "age": 16,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 27.5,
+    "year": 2021
+  },
+  {
+    "age": 16,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 34.9,
+    "year": 2021
+  },
+  {
+    "age": 16,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 15.9,
+    "year": 2021
+  },
+  {
+    "age": 16,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 16.6,
+    "year": 2021
+  },
+  {
+    "age": 17,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 5.3,
+    "year": 2021
+  },
+  {
+    "age": 17,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 29.0,
+    "year": 2021
+  },
+  {
+    "age": 17,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 33.1,
+    "year": 2021
+  },
+  {
+    "age": 17,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 15.4,
+    "year": 2021
+  },
+  {
+    "age": 17,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 17.1,
+    "year": 2021
+  },
+  {
+    "age": 18,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 4.1,
+    "year": 2021
+  },
+  {
+    "age": 18,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 27.0,
+    "year": 2021
+  },
+  {
+    "age": 18,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 33.8,
+    "year": 2021
+  },
+  {
+    "age": 18,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 16.1,
+    "year": 2021
+  },
+  {
+    "age": 18,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 19.1,
+    "year": 2021
+  },
+  {
+    "age": 19,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 5.0,
+    "year": 2021
+  },
+  {
+    "age": 19,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 25.2,
+    "year": 2021
+  },
+  {
+    "age": 19,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 31.0,
+    "year": 2021
+  },
+  {
+    "age": 19,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 17.8,
+    "year": 2021
+  },
+  {
+    "age": 19,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 21.0,
+    "year": 2021
+  },
+  {
+    "age": 14,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 16.3,
+    "year": 2022
+  },
+  {
+    "age": 14,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 42.0,
+    "year": 2022
+  },
+  {
+    "age": 14,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 24.9,
+    "year": 2022
+  },
+  {
+    "age": 14,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 9.0,
+    "year": 2022
+  },
+  {
+    "age": 14,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 7.8,
+    "year": 2022
+  },
+  {
+    "age": 15,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 10.2,
+    "year": 2022
+  },
+  {
+    "age": 15,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 38.4,
+    "year": 2022
+  },
+  {
+    "age": 15,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 29.7,
+    "year": 2022
+  },
+  {
+    "age": 15,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 11.8,
+    "year": 2022
+  },
+  {
+    "age": 15,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 9.9,
+    "year": 2022
+  },
+  {
+    "age": 16,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 7.2,
+    "year": 2022
+  },
+  {
+    "age": 16,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 34.3,
+    "year": 2022
+  },
+  {
+    "age": 16,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 32.9,
+    "year": 2022
+  },
+  {
+    "age": 16,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 13.2,
+    "year": 2022
+  },
+  {
+    "age": 16,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 12.4,
+    "year": 2022
+  },
+  {
+    "age": 17,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 7.5,
+    "year": 2022
+  },
+  {
+    "age": 17,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 34.4,
+    "year": 2022
+  },
+  {
+    "age": 17,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 31.7,
+    "year": 2022
+  },
+  {
+    "age": 17,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 13.2,
+    "year": 2022
+  },
+  {
+    "age": 17,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 13.3,
+    "year": 2022
+  },
+  {
+    "age": 18,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 6.4,
+    "year": 2022
+  },
+  {
+    "age": 18,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 31.0,
+    "year": 2022
+  },
+  {
+    "age": 18,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 32.1,
+    "year": 2022
+  },
+  {
+    "age": 18,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 14.8,
+    "year": 2022
+  },
+  {
+    "age": 18,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 15.7,
+    "year": 2022
+  },
+  {
+    "age": 19,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 6.1,
+    "year": 2022
+  },
+  {
+    "age": 19,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 27.3,
+    "year": 2022
+  },
+  {
+    "age": 19,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 31.8,
+    "year": 2022
+  },
+  {
+    "age": 19,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 16.2,
+    "year": 2022
+  },
+  {
+    "age": 19,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 18.6,
+    "year": 2022
+  },
+  {
+    "age": 14,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 21.0,
+    "year": 2022
+  },
+  {
+    "age": 14,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 45.6,
+    "year": 2022
+  },
+  {
+    "age": 14,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 21.2,
+    "year": 2022
+  },
+  {
+    "age": 14,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 6.4,
+    "year": 2022
+  },
+  {
+    "age": 14,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 5.7,
+    "year": 2022
+  },
+  {
+    "age": 15,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 12.9,
+    "year": 2022
+  },
+  {
+    "age": 15,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 43.1,
+    "year": 2022
+  },
+  {
+    "age": 15,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 27.1,
+    "year": 2022
+  },
+  {
+    "age": 15,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 9.4,
+    "year": 2022
+  },
+  {
+    "age": 15,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 7.4,
+    "year": 2022
+  },
+  {
+    "age": 16,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 9.2,
+    "year": 2022
+  },
+  {
+    "age": 16,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 40.8,
+    "year": 2022
+  },
+  {
+    "age": 16,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 29.5,
+    "year": 2022
+  },
+  {
+    "age": 16,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 10.5,
+    "year": 2022
+  },
+  {
+    "age": 16,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 10.1,
+    "year": 2022
+  },
+  {
+    "age": 17,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 9.7,
+    "year": 2022
+  },
+  {
+    "age": 17,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 38.5,
+    "year": 2022
+  },
+  {
+    "age": 17,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 30.1,
+    "year": 2022
+  },
+  {
+    "age": 17,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 11.6,
+    "year": 2022
+  },
+  {
+    "age": 17,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 10.2,
+    "year": 2022
+  },
+  {
+    "age": 18,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 7.8,
+    "year": 2022
+  },
+  {
+    "age": 18,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 35.0,
+    "year": 2022
+  },
+  {
+    "age": 18,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 30.4,
+    "year": 2022
+  },
+  {
+    "age": 18,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 13.0,
+    "year": 2022
+  },
+  {
+    "age": 18,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 13.8,
+    "year": 2022
+  },
+  {
+    "age": 19,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 7.9,
+    "year": 2022
+  },
+  {
+    "age": 19,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 30.7,
+    "year": 2022
+  },
+  {
+    "age": 19,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 29.8,
+    "year": 2022
+  },
+  {
+    "age": 19,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 13.7,
+    "year": 2022
+  },
+  {
+    "age": 19,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 17.9,
+    "year": 2022
+  },
+  {
+    "age": 14,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 11.4,
+    "year": 2022
+  },
+  {
+    "age": 14,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 38.2,
+    "year": 2022
+  },
+  {
+    "age": 14,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 28.7,
+    "year": 2022
+  },
+  {
+    "age": 14,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 11.7,
+    "year": 2022
+  },
+  {
+    "age": 14,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 10.0,
+    "year": 2022
+  },
+  {
+    "age": 15,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 7.4,
+    "year": 2022
+  },
+  {
+    "age": 15,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 33.5,
+    "year": 2022
+  },
+  {
+    "age": 15,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 32.4,
+    "year": 2022
+  },
+  {
+    "age": 15,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 14.3,
+    "year": 2022
+  },
+  {
+    "age": 15,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 12.4,
+    "year": 2022
+  },
+  {
+    "age": 16,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 5.2,
+    "year": 2022
+  },
+  {
+    "age": 16,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 27.5,
+    "year": 2022
+  },
+  {
+    "age": 16,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 36.4,
+    "year": 2022
+  },
+  {
+    "age": 16,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 16.0,
+    "year": 2022
+  },
+  {
+    "age": 16,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 14.8,
+    "year": 2022
+  },
+  {
+    "age": 17,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 5.3,
+    "year": 2022
+  },
+  {
+    "age": 17,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 30.1,
+    "year": 2022
+  },
+  {
+    "age": 17,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 33.3,
+    "year": 2022
+  },
+  {
+    "age": 17,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 14.9,
+    "year": 2022
+  },
+  {
+    "age": 17,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 16.4,
+    "year": 2022
+  },
+  {
+    "age": 18,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 4.9,
+    "year": 2022
+  },
+  {
+    "age": 18,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 26.9,
+    "year": 2022
+  },
+  {
+    "age": 18,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 33.9,
+    "year": 2022
+  },
+  {
+    "age": 18,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 16.7,
+    "year": 2022
+  },
+  {
+    "age": 18,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 17.7,
+    "year": 2022
+  },
+  {
+    "age": 19,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 4.3,
+    "year": 2022
+  },
+  {
+    "age": 19,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 23.8,
+    "year": 2022
+  },
+  {
+    "age": 19,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 33.8,
+    "year": 2022
+  },
+  {
+    "age": 19,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 18.7,
+    "year": 2022
+  },
+  {
+    "age": 19,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 19.4,
+    "year": 2022
+  },
+  {
+    "age": 14,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 14.6,
+    "year": 2023
+  },
+  {
+    "age": 14,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 42.2,
+    "year": 2023
+  },
+  {
+    "age": 14,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 25.8,
+    "year": 2023
+  },
+  {
+    "age": 14,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 9.8,
+    "year": 2023
+  },
+  {
+    "age": 14,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 7.6,
+    "year": 2023
+  },
+  {
+    "age": 15,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 9.1,
+    "year": 2023
+  },
+  {
+    "age": 15,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 38.7,
+    "year": 2023
+  },
+  {
+    "age": 15,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 30.7,
+    "year": 2023
+  },
+  {
+    "age": 15,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 12.7,
+    "year": 2023
+  },
+  {
+    "age": 15,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 8.9,
+    "year": 2023
+  },
+  {
+    "age": 16,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 6.0,
+    "year": 2023
+  },
+  {
+    "age": 16,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 34.9,
+    "year": 2023
+  },
+  {
+    "age": 16,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 33.7,
+    "year": 2023
+  },
+  {
+    "age": 16,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 14.4,
+    "year": 2023
+  },
+  {
+    "age": 16,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 10.9,
+    "year": 2023
+  },
+  {
+    "age": 17,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 7.0,
+    "year": 2023
+  },
+  {
+    "age": 17,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 32.1,
+    "year": 2023
+  },
+  {
+    "age": 17,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 33.4,
+    "year": 2023
+  },
+  {
+    "age": 17,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 15.7,
+    "year": 2023
+  },
+  {
+    "age": 17,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 11.7,
+    "year": 2023
+  },
+  {
+    "age": 18,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 5.2,
+    "year": 2023
+  },
+  {
+    "age": 18,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 30.0,
+    "year": 2023
+  },
+  {
+    "age": 18,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 33.8,
+    "year": 2023
+  },
+  {
+    "age": 18,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 16.7,
+    "year": 2023
+  },
+  {
+    "age": 18,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 14.4,
+    "year": 2023
+  },
+  {
+    "age": 19,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 6.4,
+    "year": 2023
+  },
+  {
+    "age": 19,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 27.2,
+    "year": 2023
+  },
+  {
+    "age": 19,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 31.2,
+    "year": 2023
+  },
+  {
+    "age": 19,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 16.8,
+    "year": 2023
+  },
+  {
+    "age": 19,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 18.5,
+    "year": 2023
+  },
+  {
+    "age": 14,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 18.4,
+    "year": 2023
+  },
+  {
+    "age": 14,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 45.3,
+    "year": 2023
+  },
+  {
+    "age": 14,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 22.7,
+    "year": 2023
+  },
+  {
+    "age": 14,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 8.0,
+    "year": 2023
+  },
+  {
+    "age": 14,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 5.5,
+    "year": 2023
+  },
+  {
+    "age": 15,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 11.1,
+    "year": 2023
+  },
+  {
+    "age": 15,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 43.6,
+    "year": 2023
+  },
+  {
+    "age": 15,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 27.6,
+    "year": 2023
+  },
+  {
+    "age": 15,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 10.4,
+    "year": 2023
+  },
+  {
+    "age": 15,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 7.4,
+    "year": 2023
+  },
+  {
+    "age": 16,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 7.8,
+    "year": 2023
+  },
+  {
+    "age": 16,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 39.1,
+    "year": 2023
+  },
+  {
+    "age": 16,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 32.1,
+    "year": 2023
+  },
+  {
+    "age": 16,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 11.8,
+    "year": 2023
+  },
+  {
+    "age": 16,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 9.2,
+    "year": 2023
+  },
+  {
+    "age": 17,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 8.4,
+    "year": 2023
+  },
+  {
+    "age": 17,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 35.1,
+    "year": 2023
+  },
+  {
+    "age": 17,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 32.4,
+    "year": 2023
+  },
+  {
+    "age": 17,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 13.4,
+    "year": 2023
+  },
+  {
+    "age": 17,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 10.8,
+    "year": 2023
+  },
+  {
+    "age": 18,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 5.6,
+    "year": 2023
+  },
+  {
+    "age": 18,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 32.4,
+    "year": 2023
+  },
+  {
+    "age": 18,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 32.9,
+    "year": 2023
+  },
+  {
+    "age": 18,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 15.8,
+    "year": 2023
+  },
+  {
+    "age": 18,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 13.2,
+    "year": 2023
+  },
+  {
+    "age": 19,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 7.1,
+    "year": 2023
+  },
+  {
+    "age": 19,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 28.6,
+    "year": 2023
+  },
+  {
+    "age": 19,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 30.8,
+    "year": 2023
+  },
+  {
+    "age": 19,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 14.9,
+    "year": 2023
+  },
+  {
+    "age": 19,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 18.5,
+    "year": 2023
+  },
+  {
+    "age": 14,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 10.5,
+    "year": 2023
+  },
+  {
+    "age": 14,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 39.0,
+    "year": 2023
+  },
+  {
+    "age": 14,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 29.0,
+    "year": 2023
+  },
+  {
+    "age": 14,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 11.7,
+    "year": 2023
+  },
+  {
+    "age": 14,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 9.8,
+    "year": 2023
+  },
+  {
+    "age": 15,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 7.0,
+    "year": 2023
+  },
+  {
+    "age": 15,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 33.6,
+    "year": 2023
+  },
+  {
+    "age": 15,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 34.0,
+    "year": 2023
+  },
+  {
+    "age": 15,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 15.0,
+    "year": 2023
+  },
+  {
+    "age": 15,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 10.4,
+    "year": 2023
+  },
+  {
+    "age": 16,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 4.2,
+    "year": 2023
+  },
+  {
+    "age": 16,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 30.5,
+    "year": 2023
+  },
+  {
+    "age": 16,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 35.4,
+    "year": 2023
+  },
+  {
+    "age": 16,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 17.1,
+    "year": 2023
+  },
+  {
+    "age": 16,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 12.7,
+    "year": 2023
+  },
+  {
+    "age": 17,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 5.6,
+    "year": 2023
+  },
+  {
+    "age": 17,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 29.0,
+    "year": 2023
+  },
+  {
+    "age": 17,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 34.4,
+    "year": 2023
+  },
+  {
+    "age": 17,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 18.2,
+    "year": 2023
+  },
+  {
+    "age": 17,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 12.7,
+    "year": 2023
+  },
+  {
+    "age": 18,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 4.6,
+    "year": 2023
+  },
+  {
+    "age": 18,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 27.5,
+    "year": 2023
+  },
+  {
+    "age": 18,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 34.7,
+    "year": 2023
+  },
+  {
+    "age": 18,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 17.6,
+    "year": 2023
+  },
+  {
+    "age": 18,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 15.6,
+    "year": 2023
+  },
+  {
+    "age": 19,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 5.6,
+    "year": 2023
+  },
+  {
+    "age": 19,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 25.7,
+    "year": 2023
+  },
+  {
+    "age": 19,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 31.6,
+    "year": 2023
+  },
+  {
+    "age": 19,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 18.7,
+    "year": 2023
+  },
+  {
+    "age": 19,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 18.5,
+    "year": 2023
+  },
+  {
+    "age": 14,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 18.3,
+    "year": 2024
+  },
+  {
+    "age": 14,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 43.7,
+    "year": 2024
+  },
+  {
+    "age": 14,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 22.9,
+    "year": 2024
+  },
+  {
+    "age": 14,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 9.1,
+    "year": 2024
+  },
+  {
+    "age": 14,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 6.0,
+    "year": 2024
+  },
+  {
+    "age": 15,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 10.3,
+    "year": 2024
+  },
+  {
+    "age": 15,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 39.6,
+    "year": 2024
+  },
+  {
+    "age": 15,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 30.5,
+    "year": 2024
+  },
+  {
+    "age": 15,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 11.1,
+    "year": 2024
+  },
+  {
+    "age": 15,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 8.4,
+    "year": 2024
+  },
+  {
+    "age": 16,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 6.6,
+    "year": 2024
+  },
+  {
+    "age": 16,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 35.2,
+    "year": 2024
+  },
+  {
+    "age": 16,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 33.3,
+    "year": 2024
+  },
+  {
+    "age": 16,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 14.5,
+    "year": 2024
+  },
+  {
+    "age": 16,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 10.4,
+    "year": 2024
+  },
+  {
+    "age": 17,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 7.8,
+    "year": 2024
+  },
+  {
+    "age": 17,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 36.1,
+    "year": 2024
+  },
+  {
+    "age": 17,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 32.3,
+    "year": 2024
+  },
+  {
+    "age": 17,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 13.7,
+    "year": 2024
+  },
+  {
+    "age": 17,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 10.0,
+    "year": 2024
+  },
+  {
+    "age": 18,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 5.7,
+    "year": 2024
+  },
+  {
+    "age": 18,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 31.7,
+    "year": 2024
+  },
+  {
+    "age": 18,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 33.6,
+    "year": 2024
+  },
+  {
+    "age": 18,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 16.3,
+    "year": 2024
+  },
+  {
+    "age": 18,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 12.8,
+    "year": 2024
+  },
+  {
+    "age": 19,
+    "gender": "전체",
+    "time": "2시간 미만",
+    "value": 6.3,
+    "year": 2024
+  },
+  {
+    "age": 19,
+    "gender": "전체",
+    "time": "2~4시간",
+    "value": 31.4,
+    "year": 2024
+  },
+  {
+    "age": 19,
+    "gender": "전체",
+    "time": "4~6시간",
+    "value": 32.8,
+    "year": 2024
+  },
+  {
+    "age": 19,
+    "gender": "전체",
+    "time": "6~8시간",
+    "value": 15.6,
+    "year": 2024
+  },
+  {
+    "age": 19,
+    "gender": "전체",
+    "time": "8시간 이상",
+    "value": 13.9,
+    "year": 2024
+  },
+  {
+    "age": 14,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 22.9,
+    "year": 2024
+  },
+  {
+    "age": 14,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 45.5,
+    "year": 2024
+  },
+  {
+    "age": 14,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 19.5,
+    "year": 2024
+  },
+  {
+    "age": 14,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 7.0,
+    "year": 2024
+  },
+  {
+    "age": 14,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 5.1,
+    "year": 2024
+  },
+  {
+    "age": 15,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 13.3,
+    "year": 2024
+  },
+  {
+    "age": 15,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 42.9,
+    "year": 2024
+  },
+  {
+    "age": 15,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 27.5,
+    "year": 2024
+  },
+  {
+    "age": 15,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 9.0,
+    "year": 2024
+  },
+  {
+    "age": 15,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 7.3,
+    "year": 2024
+  },
+  {
+    "age": 16,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 8.1,
+    "year": 2024
+  },
+  {
+    "age": 16,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 38.5,
+    "year": 2024
+  },
+  {
+    "age": 16,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 32.3,
+    "year": 2024
+  },
+  {
+    "age": 16,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 12.5,
+    "year": 2024
+  },
+  {
+    "age": 16,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 8.6,
+    "year": 2024
+  },
+  {
+    "age": 17,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 8.9,
+    "year": 2024
+  },
+  {
+    "age": 17,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 39.0,
+    "year": 2024
+  },
+  {
+    "age": 17,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 30.6,
+    "year": 2024
+  },
+  {
+    "age": 17,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 12.1,
+    "year": 2024
+  },
+  {
+    "age": 17,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 9.4,
+    "year": 2024
+  },
+  {
+    "age": 18,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 6.3,
+    "year": 2024
+  },
+  {
+    "age": 18,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 33.8,
+    "year": 2024
+  },
+  {
+    "age": 18,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 32.2,
+    "year": 2024
+  },
+  {
+    "age": 18,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 15.5,
+    "year": 2024
+  },
+  {
+    "age": 18,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 12.1,
+    "year": 2024
+  },
+  {
+    "age": 19,
+    "gender": "male",
+    "time": "2시간 미만",
+    "value": 7.3,
+    "year": 2024
+  },
+  {
+    "age": 19,
+    "gender": "male",
+    "time": "2~4시간",
+    "value": 33.6,
+    "year": 2024
+  },
+  {
+    "age": 19,
+    "gender": "male",
+    "time": "4~6시간",
+    "value": 31.8,
+    "year": 2024
+  },
+  {
+    "age": 19,
+    "gender": "male",
+    "time": "6~8시간",
+    "value": 14.4,
+    "year": 2024
+  },
+  {
+    "age": 19,
+    "gender": "male",
+    "time": "8시간 이상",
+    "value": 13.0,
+    "year": 2024
+  },
+  {
+    "age": 14,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 13.7,
+    "year": 2024
+  },
+  {
+    "age": 14,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 41.8,
+    "year": 2024
+  },
+  {
+    "age": 14,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 26.3,
+    "year": 2024
+  },
+  {
+    "age": 14,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 11.3,
+    "year": 2024
+  },
+  {
+    "age": 14,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 6.9,
+    "year": 2024
+  },
+  {
+    "age": 15,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 7.2,
+    "year": 2024
+  },
+  {
+    "age": 15,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 36.2,
+    "year": 2024
+  },
+  {
+    "age": 15,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 33.7,
+    "year": 2024
+  },
+  {
+    "age": 15,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 13.4,
+    "year": 2024
+  },
+  {
+    "age": 15,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 9.6,
+    "year": 2024
+  },
+  {
+    "age": 16,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 5.1,
+    "year": 2024
+  },
+  {
+    "age": 16,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 31.7,
+    "year": 2024
+  },
+  {
+    "age": 16,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 34.3,
+    "year": 2024
+  },
+  {
+    "age": 16,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 16.7,
+    "year": 2024
+  },
+  {
+    "age": 16,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 12.2,
+    "year": 2024
+  },
+  {
+    "age": 17,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 6.7,
+    "year": 2024
+  },
+  {
+    "age": 17,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 33.1,
+    "year": 2024
+  },
+  {
+    "age": 17,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 34.2,
+    "year": 2024
+  },
+  {
+    "age": 17,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 15.4,
+    "year": 2024
+  },
+  {
+    "age": 17,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 10.6,
+    "year": 2024
+  },
+  {
+    "age": 18,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 5.0,
+    "year": 2024
+  },
+  {
+    "age": 18,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 29.5,
+    "year": 2024
+  },
+  {
+    "age": 18,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 35.1,
+    "year": 2024
+  },
+  {
+    "age": 18,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 17.0,
+    "year": 2024
+  },
+  {
+    "age": 18,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 13.4,
+    "year": 2024
+  },
+  {
+    "age": 19,
+    "gender": "female",
+    "time": "2시간 미만",
+    "value": 5.4,
+    "year": 2024
+  },
+  {
+    "age": 19,
+    "gender": "female",
+    "time": "2~4시간",
+    "value": 29.2,
+    "year": 2024
+  },
+  {
+    "age": 19,
+    "gender": "female",
+    "time": "4~6시간",
+    "value": 33.8,
+    "year": 2024
+  },
+  {
+    "age": 19,
+    "gender": "female",
+    "time": "6~8시간",
+    "value": 16.8,
+    "year": 2024
+  },
+  {
+    "age": 19,
+    "gender": "female",
+    "time": "8시간 이상",
+    "value": 14.8,
+    "year": 2024
+  }
+]
