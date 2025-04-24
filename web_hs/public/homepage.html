@@ -15,6 +15,7 @@
   <script defer src="loadtest.js"></script>
   <script defer src="quiz_loader.js"></script>
 </head>
+
 <body>
   <header>  
     <nav class="navbar">
@@ -29,7 +30,7 @@
           <li><a href="#map">지도</a></li>
           <li><a href="#test">정신 검사 테스트</a></li>
           <li><a href="#depression">우울감</a></li>
-          <li><a href="#stats">통계</a></li>
+          <li><a href="#scatter">통계</a></li>
           <li><a href="#quiz">Quiz</a></li>
           <li><a href="#bio">Biorthythm</a></li>
         </ul>
@@ -72,9 +73,8 @@
     <div id="depression-container"></div>
   </section>
 
-  <section id="stats" class="full-section home-hero bg-white">
-    <h2>통계</h2>
-    <p>청소년 최대 고민은 ? & 고민 차트</p>
+  <section id="scatter" class="full-section home-hero bg-white">
+    <div id="scatter-container"></div>
   </section>
 
   <section id="quiz" class="full-section home-hero bg-gray" style="min-height: 100vh;">
@@ -107,7 +107,14 @@
         .then(html => {
           const quizContainer = document.getElementById("quiz-container");
           quizContainer.innerHTML = html;
-          initQuizMenu();
+          initQuizMenu(); // quiz_loader.js 함수 호출
+        });
+
+      // scatter.html 삽입
+      fetch("scatter.html")
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById("scatter-container").innerHTML = html;
         });
     });
 
@@ -117,7 +124,7 @@
         .then(res => res.text())
         .then(html => {
           document.getElementById("quiz-container").innerHTML = html;
-          initQuiz1();
+          initQuiz1(); // 삽입 후 실행
         });
     }
 
@@ -126,7 +133,7 @@
         .then(res => res.text())
         .then(html => {
           document.getElementById("quiz-container").innerHTML = html;
-          initQuiz2();
+          initQuiz2(); // 삽입 후 실행
         });
     }
 
