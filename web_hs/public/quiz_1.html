@@ -1,63 +1,17 @@
-<!-- ✅ quiz_1.html 의 내용 중 홈페이지에서 include될 수 있도록 구조만 남긴 버전 -->
 <div class="smartphone-quiz-page">
   <div class="quiz-box fade-in">
     <h2>🌙 자기 전 스마트폰 얼마나 쓰시나요?</h2>
     <form id="quizForm">
       <div id="options">
-        <label class="option">
-          <input type="radio" name="usage" value="1">
-          5분 이내
-        </label>
-        <label class="option">
-          <input type="radio" name="usage" value="2">
-          5~15분
-        </label>
-        <label class="option">
-          <input type="radio" name="usage" value="3">
-          15~30분
-        </label>
-        <label class="option">
-          <input type="radio" name="usage" value="4">
-          30~60분
-        </label>
-        <label class="option">
-          <input type="radio" name="usage" value="5">
-          1시간 이상
-        </label>
+        <label class="option"><input type="radio" name="usage" value="1"> 5분 이내</label>
+        <label class="option"><input type="radio" name="usage" value="2"> 5~15분</label>
+        <label class="option"><input type="radio" name="usage" value="3"> 15~30분</label>
+        <label class="option"><input type="radio" name="usage" value="4"> 30~60분</label>
+        <label class="option"><input type="radio" name="usage" value="5"> 1시간 이상</label>
       </div>
-      <button id="submitQuiz" type="button">결과 보기</button>
+      <button id="submitQuiz" type="button" onclick="calculateScore()">결과 보기</button>
+      <button type="button" class="quiz-button" onclick="goBackToQuizMenu()">메뉴로 돌아가기</button>
     </form>
-
     <div id="result" class="fade-in"></div>
   </div>
 </div>
-
-<script>
-function calculateScore() {
-  const selected = document.querySelector('input[name="usage"]:checked');
-  const resultDiv = document.getElementById("result");
-  const optionsDiv = document.getElementById("options");
-  const button = document.querySelector('button');
-
-  if (!selected) {
-    resultDiv.innerText = "하나를 선택해주세요 🌱";
-    return;
-  }
-
-  const score = parseInt(selected.value);
-  let message = "";
-
-  if (score <= 2) {
-    message = "💡 스마트폰 사용이 건강한 평이에요. 잘 하고 있어요!";
-  } else if (score <= 4) {
-    message = "🌥️ 약간의 주의가 필요해요. 조금씩 줄어볼까요.";
-  } else {
-    message = "⚠️ 가의조 위험! 자름기 1시간 전에는 스마트폰을 머리해요.";
-  }
-
-  optionsDiv.style.display = "none";
-  button.style.display = "none";
-
-  resultDiv.innerText = `✨ 당신의 점수는 ${score}/5점입니다.\n${message}`;
-}
-</script>
