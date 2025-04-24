@@ -59,8 +59,34 @@ function showResult() {
   resultEl.innerHTML = `<strong>결과:</strong> ${message}`;
 }
 
-// DOM이 로드되면 첫 질문 세팅
-document.addEventListener("DOMContentLoaded", () => {
-  const questionEl = document.getElementById("question");
-  if (questionEl) updateQuiz();
-});
+function loadTest() {
+  // 🔴 버튼과 설명 문구 모두 숨기기
+  const startBtn = document.getElementById("start-test-btn");
+  if (startBtn) startBtn.style.display = "none";
+
+  const testIntro = document.getElementById("test-intro");
+  if (testIntro) testIntro.style.display = "none";
+
+  fetch("test.html")
+    .then(res => res.text())
+    .then(html => {
+      const container = document.getElementById("test-container");
+      if (container) {
+        container.innerHTML = html;
+
+        setTimeout(() => {
+          currentIndex = 0;
+          totalScore = 0;
+          updateQuiz();
+
+          const testArea = document.getElementById("quiz-container");
+          if (testArea) {
+            window.scrollTo({
+              top: testArea.offsetTop,
+              behavior: "smooth"
+            });
+          }
+        }, 100);
+      }
+    });
+}
