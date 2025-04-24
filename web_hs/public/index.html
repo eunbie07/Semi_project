@@ -1,21 +1,151 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>스마트폰 과의존</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="assets/logo.png" />
+  <style>
+    #intro {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f5f5f7;
+      overflow: hidden;
+    }
+
+    #phone {
+      width: 500px;
+      height: auto;
+      transition: transform 1.5s ease, opacity 1.5s ease;
+      cursor: pointer;
+    }
+
+    #phone.zoomed {
+      animation: zoomFade 1.5s ease forwards;
+    }
+
+    @keyframes zoomFade {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(1.8); opacity: 0; }
+    }
+
+    .loader-overlay {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 2;
+      display: none;
+    }
+
+    .loading-text {
+      font-size: 18px;
+      color: #2ecc71;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .progress-container {
+      width: 140px;
+      height: 12px;
+      background-color: rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background-color: #2ecc71;
+    }
+
+    @keyframes fill {
+      0% { width: 0%; }
+      100% { width: 100%; }
+    }
+  </style>
 </head>
 <body>
-  <!-- 초기 인트로 -->
+
+  <!-- ✅ 인트로 -->
   <section id="intro">
     <img id="phone" src="assets/phone_off.png" alt="스마트폰">
+    <div class="loader-overlay" id="loader">
+      <p class="loading-text">Loading...</p>
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+    </div>
   </section>
 
-  <!-- homepage.html을 동적으로 불러올 영역 -->
+  <!-- ✅ homepage.html 영역 -->
   <section id="homepage" style="display: none;"></section>
 
-  <script src="script_1.js"></script>
+  <script>
+    let started = false;
+  
+    function startLoadingSequence() {
+      if (started) return;
+      started = true;
+  
+      const loader = document.getElementById("loader");
+      const phone = document.getElementById("phone");
+      const progressBar = document.getElementById("progressBar");
+  
+      loader.style.display = "block";
+      progressBar.style.animation = "fill 3s forwards";
+  
+      setTimeout(() => {
+        loader.style.display = "none";
+        phone.src = "assets/phone_on.png";
+  
+        setTimeout(() => {
+          phone.classList.add("zoomed");
+  
+          setTimeout(() => {
+            document.getElementById("intro").style.display = "none";
+            fetch("homepage.html")
+              .then(res => res.text())
+              .then(html => {
+                const homepage = document.getElementById("homepage");
+                homepage.innerHTML = html;
+                homepage.style.display = "block";
+                window.scrollTo(0, 0);
+  
+                // ✅ intro 실행 완료 기록
+                localStorage.setItem("introPlayed", "true");
+              });
+          }, 1500);
+        }, 200);
+      }, 3000);
+    }
+  
+    // ✅ 로딩 여부 확인 후 자동 분기
+    window.addEventListener("DOMContentLoaded", () => {
+      const alreadyPlayed = localStorage.getItem("introPlayed");
+  
+      if (alreadyPlayed === "true") {
+        // ✅ 바로 homepage 로드
+        document.getElementById("intro").style.display = "none";
+        fetch("homepage.html")
+          .then(res => res.text())
+          .then(html => {
+            const homepage = document.getElementById("homepage");
+            homepage.innerHTML = html;
+            homepage.style.display = "block";
+            window.scrollTo(0, 0);
+          });
+      } else {
+        // ✅ 클릭 또는 터치로 시작
+        document.getElementById("intro").addEventListener("click", startLoadingSequence);
+        document.getElementById("intro").addEventListener("touchstart", startLoadingSequence);
+      }
+    });
+  </script>
 </body>
 </html>

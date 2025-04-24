@@ -11,7 +11,7 @@ function initQuiz1() {
 
   resultBtn.addEventListener("click", () => {
     const selected = document.querySelector('input[name="usage"]:checked');
-    const resultDiv = document.getElementById("result");
+    const resultDiv = document.getElementById("quiz-result");
     const optionsDiv = document.getElementById("options");
 
     if (!selected) {
@@ -38,7 +38,7 @@ function initQuiz1() {
 
 function initQuiz2() {
   const quizContainer = document.getElementById("quizContainer");
-  const result = document.getElementById("result");
+  const result = document.getElementById("quiz-result");
 
   if (!quizContainer || !result) return;
 

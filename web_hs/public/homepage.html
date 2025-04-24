@@ -17,7 +17,7 @@
   <script defer src="quiz_loader.js"></script>
   <script src="depression_compare.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
   
 </head>
 
@@ -105,7 +105,12 @@
         .then(res => res.text())
         .then(html => {
           document.getElementById("depression-container").innerHTML = html;
-        });
+
+    // ✅ 스크립트 따로 로드
+      const script = document.createElement("script");
+      script.src = "depression_compare.js";
+      document.body.appendChild(script);
+    });
 
       // quiz_menu.html 삽입 후 이벤트 연결
       fetch("quiz_menu.html")

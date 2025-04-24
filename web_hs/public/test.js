@@ -26,7 +26,10 @@ function updateQuiz() {
   const progressBar = document.getElementById("progress-bar");
 
   if (questionEl && progressText && progressBar) {
-    questionEl.textContent = questions[currentIndex];
+    const newText = `<strong>${currentIndex + 1}.</strong> ${questions[currentIndex]}`;
+    console.log("✅ 실제 표시되는 텍스트:", newText);
+    questionEl.innerHTML = newText;
+
     const percent = Math.round((currentIndex / questions.length) * 100);
     progressText.textContent = `${percent}% 완료`;
     progressBar.style.width = `${percent}%`;
@@ -39,14 +42,16 @@ function showResult() {
   const progressText = document.getElementById("progress-text");
   const progressBar = document.getElementById("progress-bar");
   const progressWrapper = document.getElementById("progress-wrapper");
-  const resultEl = document.getElementById("result");
+  const resultEl = document.getElementById("menu-result");
 
+  // 요소 숨기기
   if (questionEl) questionEl.style.display = "none";
   buttons.forEach(btn => btn.style.display = "none");
   if (progressText) progressText.style.display = "none";
   if (progressBar) progressBar.style.display = "none";
   if (progressWrapper) progressWrapper.style.display = "none";
 
+  // 결과 메시지
   let message = "";
   if (totalScore >= 17) {
     message = "⚠️ 정서적으로 위험할 수 있어요. 전문가 상담을 고려해보세요.";
@@ -56,7 +61,9 @@ function showResult() {
     message = "😊 현재 상태는 비교적 안정적이에요. 좋은 습관을 유지하세요!";
   }
 
+  // 결과 출력
   resultEl.innerHTML = `<strong>결과:</strong> ${message}`;
+  resultEl.style.display = "block";  // ✅ 결과 박스 보이도록 설정
 }
 
 function goBackToQuizMenu() {
@@ -69,7 +76,7 @@ function goBackToQuizMenu() {
       // 배경색 초기화
       document.getElementById("quiz").className = "full-section home-hero bg-gray";
 
-      // 스크롤 이동 (선택)
+      // 스크롤 이동
       window.scrollTo({
         top: document.getElementById("quiz").offsetTop,
         behavior: "smooth"
@@ -77,8 +84,7 @@ function goBackToQuizMenu() {
     });
 }
 
-
-// ✅ DOM이 완전히 로드된 후 초기화
+// ✅ 초기 로딩 시 첫 질문 출력
 window.addEventListener("DOMContentLoaded", () => {
   if (document.getElementById("question")) {
     updateQuiz();

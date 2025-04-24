@@ -26,7 +26,7 @@ function updateQuiz() {
   const progressBar = document.getElementById("progress-bar");
 
   if (questionEl && progressText && progressBar) {
-    questionEl.textContent = questions[currentIndex];
+    questionEl.innerHTML = `<strong>${currentIndex + 1}.</strong> ${questions[currentIndex]}`;
     const percent = Math.round((currentIndex / questions.length) * 100);
     progressText.textContent = `${percent}% 완료`;
     progressBar.style.width = `${percent}%`;
@@ -39,7 +39,7 @@ function showResult() {
   const progressText = document.getElementById("progress-text");
   const progressBar = document.getElementById("progress-bar");
   const progressWrapper = document.getElementById("progress-wrapper");
-  const resultEl = document.getElementById("result");
+  const resultEl = document.getElementById("menu-result");
 
   if (questionEl) questionEl.style.display = "none";
   buttons.forEach(btn => btn.style.display = "none");
@@ -57,6 +57,7 @@ function showResult() {
   }
 
   resultEl.innerHTML = `<strong>결과:</strong> ${message}`;
+  resultEl.style.display = "block";
 }
 
 function loadTest() {

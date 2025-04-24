@@ -1,0 +1,47 @@
+<div class="loader-wrapper">
+    <p class="loading-text">loading...</p>
+    <div class="progress-container">
+      <div class="progress-bar"></div>
+    </div>
+  </div>
+  
+  <style>
+  .loader-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* 전체화면 중앙 */
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  .loading-text {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  .progress-container {
+    width: 300px;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #27ae60; /* ✅ 초록색 */
+    animation: fill 3s forwards; /* ✅ 3초 애니메이션 */
+  }
+  
+  @keyframes fill {
+    0% { width: 0%; }
+    100% { width: 100%; }
+  }
+  </style>
+  
