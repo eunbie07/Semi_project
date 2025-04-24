@@ -62,7 +62,7 @@ async function updateCharts() {
         legend: { position: 'top' },
         tooltip: { mode: 'index', intersect: false },
         datalabels: {
-          display: false, 
+          display: true, // ✅ 수치 표시
           color: '#333',
           anchor: 'end',
           align: 'top',
@@ -83,7 +83,7 @@ async function updateCharts() {
         }
       }
     },
-    // plugins: [ChartDataLabels] // ✅ 막대그래프에만 플러그인 적용
+    plugins: [ChartDataLabels] // ✅ 막대그래프에만 플러그인 적용
   });
 
   // ✅ Line Chart
