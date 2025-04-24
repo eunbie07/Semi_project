@@ -11,31 +11,30 @@
   <script defer src="stress_map.js"></script>
   <script defer src="weather.js"></script>
   <script defer src="bio.js"></script>
-  <script src="section-scroll.js" defer></script>
-  <script src="loadtest.js" defer></script>
-
-
+  <script defer src="section-scroll.js"></script>
+  <script defer src="loadtest.js"></script>
+  <script defer src="quiz_loader.js"></script>
 </head>
 <body>
   <header>  
     <nav class="navbar">
-        <div class="nav-inner">
-            <div class="logo">
-                <a href="homepage.html">
-                  <img src="/web_hs/public/assets/logo.png" alt="Logo" />
-                </a>
-              </div>
-          <ul class="menu">
-            <li><a href="#weather">날씨 감정 그래프</a></li>
-            <li><a href="#map">지도</a></li>
-            <li><a href="#test">정신 검사 테스트</a></li>
-            <li><a href="#depression">우울감</a></li>
-            <li><a href="#stats">통계</a></li>
-            <li><a href="#quiz">Quiz</a></li>
-            <li><a href="#bio">Biorthythm</a></li>
-          </ul>
+      <div class="nav-inner">
+        <div class="logo">
+          <a href="homepage.html">
+            <img src="assets/logo.png" alt="Logo" />
+          </a>
         </div>
-      </nav>
+        <ul class="menu">
+          <li><a href="#weather">날씨 감정 그래프</a></li>
+          <li><a href="#map">지도</a></li>
+          <li><a href="#test">정신 검사 테스트</a></li>
+          <li><a href="#depression">우울감</a></li>
+          <li><a href="#stats">통계</a></li>
+          <li><a href="#quiz">Quiz</a></li>
+          <li><a href="#bio">Biorthythm</a></li>
+        </ul>
+      </div>
+    </nav>
   </header>
 
   <section class="full-section home-hero bg-white">
@@ -43,7 +42,7 @@
       <h1>스마트폰 <br />과의존</h1>
       <p>손에서 놓지 못한 것들,<br> 우리의 마음도 놓치고 있습니다.</p>
     </div>
-    <img src="/web_hs/public/assets/home.png" alt="Home_img" class="home-image" />
+    <img src="assets/home.png" alt="Home_img" class="home-image" />
   </section>
   
   <section id="weather" class="full-section weather-page bg-gray">
@@ -68,9 +67,7 @@
     </div>
     <div id="test-container"></div>
   </section>
-  
-  
-  
+
   <section id="depression" class="full-section home-hero bg-gray">
     <div id="depression-container"></div>
   </section>
@@ -80,70 +77,61 @@
     <p>청소년 최대 고민은 ? & 고민 차트</p>
   </section>
 
-  <section id="quiz" class="full-section home-hero bg-gray">
-    <!-- quiz_menu.html 내용이 여기에 삽입됨 -->
+  <section id="quiz" class="full-section home-hero bg-gray" style="min-height: 100vh;">
     <div id="quiz-container"></div>
   </section>
-  
-  
-  <!-- quiz_1, quiz_2 동적 로드 함수 -->
-  <script>
-    function loadQuiz(page, className) {
-      const container = document.getElementById("quiz-container");
-      
-      // 배경 스타일용 클래스 교체
-      document.getElementById("quiz").className = `full-section ${className}`;
-  
-      // 해당 퀴즈 파일 로드
-      fetch(page)
-        .then(res => res.text())
-        .then(html => {
-          container.innerHTML = html;
-  
-          // 스크롤 이동
-          window.scrollTo({
-            top: document.getElementById("quiz").offsetTop,
-            behavior: "smooth"
-          });
-        });
-    }
-  </script>
-  
-  </script>
 
   <section id="bio" class="full-section home-hero bg-white">
     <div id="bio-container"></div>
   </section>
-  
+
   <script>
-    // 페이지 로드 시: bio, depression, quiz_menu만 자동 삽입
     window.addEventListener("DOMContentLoaded", () => {
       // bio.html 삽입
       fetch("bio.html")
         .then(res => res.text())
         .then(html => {
-          const bioContainer = document.getElementById("bio-container");
-          if (bioContainer) bioContainer.innerHTML = html;
+          document.getElementById("bio-container").innerHTML = html;
         });
-  
+
       // depression.html 삽입
       fetch("depression.html")
         .then(res => res.text())
         .then(html => {
-          const depressionContainer = document.getElementById("depression-container");
-          if (depressionContainer) depressionContainer.innerHTML = html;
+          document.getElementById("depression-container").innerHTML = html;
         });
-  
-      // quiz_menu.html 삽입
+
+      // quiz_menu.html 삽입 후 이벤트 연결
       fetch("quiz_menu.html")
         .then(res => res.text())
         .then(html => {
           const quizContainer = document.getElementById("quiz-container");
-          if (quizContainer) quizContainer.innerHTML = html;
+          quizContainer.innerHTML = html;
+          initQuizMenu();
         });
     });
-  
+
+    // 전역에서 사용할 수 있도록 함수 노출
+    function loadQuiz1() {
+      fetch("quiz_1.html")
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById("quiz-container").innerHTML = html;
+          initQuiz1();
+        });
+    }
+
+    function loadQuiz2() {
+      fetch("quiz_2.html")
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById("quiz-container").innerHTML = html;
+          initQuiz2();
+        });
+    }
+
+    window.loadQuiz1 = loadQuiz1;
+    window.loadQuiz2 = loadQuiz2;
   </script>
-  
 </body>
 </html>

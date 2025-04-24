@@ -59,9 +59,8 @@ function showResult() {
   resultEl.innerHTML = `<strong>결과:</strong> ${message}`;
 }
 
-// 초기 로딩 시 첫 질문 세팅
-window.addEventListener("DOMContentLoaded", () => {
-  if (document.getElementById("question")) {
-    updateQuiz();
-  }
+// DOM이 로드되면 첫 질문 세팅
+document.addEventListener("DOMContentLoaded", () => {
+  const questionEl = document.getElementById("question");
+  if (questionEl) updateQuiz();
 });

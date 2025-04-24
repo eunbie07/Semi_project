@@ -1,17 +1,24 @@
-<div class="smartphone-quiz-page">
-  <div class="quiz-box fade-in">
-    <h2>🌙 자기 전 스마트폰 얼마나 쓰시나요?</h2>
-    <form id="quizForm">
-      <div id="options">
-        <label class="option"><input type="radio" name="usage" value="1"> 5분 이내</label>
-        <label class="option"><input type="radio" name="usage" value="2"> 5~15분</label>
-        <label class="option"><input type="radio" name="usage" value="3"> 15~30분</label>
-        <label class="option"><input type="radio" name="usage" value="4"> 30~60분</label>
-        <label class="option"><input type="radio" name="usage" value="5"> 1시간 이상</label>
-      </div>
-      <button id="submitQuiz" type="button" onclick="calculateScore()">결과 보기</button>
-      <button type="button" class="quiz-button" onclick="goBackToQuizMenu()">메뉴로 돌아가기</button>
-    </form>
-    <div id="result" class="fade-in"></div>
-  </div>
+<div class="quiz-box fade-in">
+  <h2>🌙 잠자기 전 스마트폰 얼마나 쓰시나요?</h2>
+  <form id="quizForm">
+    <div id="options">
+      <label class="option">
+        <input type="radio" name="usage" value="1"> 5분 이내
+      </label>
+      <label class="option">
+        <input type="radio" name="usage" value="2"> 5~15분
+      </label>
+      <label class="option">
+        <input type="radio" name="usage" value="3"> 15~30분
+      </label>
+      <label class="option">
+        <input type="radio" name="usage" value="4"> 30~60분
+      </label>
+      <label class="option">
+        <input type="radio" name="usage" value="5"> 1시간 이상
+      </label>
+    </div>
+    <button type="button" id="resultBtn">결과 보기</button>
+  </form>
+  <div id="result" class="fade-in"></div>
 </div>
