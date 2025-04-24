@@ -1,11 +1,12 @@
 // ✅ CDN에서 ChartDataLabels 로드 필요
-// index.html head에 추가: 
-//<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
+// <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
 
 // ✅ Chart.js 플러그인 등록
+Chart.register(ChartDataLabels);
+
+// API 엔드포인트
 const API_BASE = "http://192.168.1.23:3001/depression";
 let barChart, lineChart;
-Chart.register(ChartDataLabels);
 
 async function getDepressionRate(year, age, gender) {
   const url = `${API_BASE}?year=${year}&age=${age}&gender=${gender}`;
@@ -61,6 +62,7 @@ async function updateCharts() {
         legend: { position: 'top' },
         tooltip: { mode: 'index', intersect: false },
         datalabels: {
+          display: true, // ✅ 수치 표시
           color: '#333',
           anchor: 'end',
           align: 'top',
@@ -81,7 +83,7 @@ async function updateCharts() {
         }
       }
     },
-    plugins: [ChartDataLabels]
+    plugins: [ChartDataLabels] // ✅ 막대그래프에만 플러그인 적용
   });
 
   // ✅ Line Chart
@@ -122,7 +124,10 @@ async function updateCharts() {
       responsive: true,
       plugins: {
         legend: { position: 'top' },
-        tooltip: { mode: 'index', intersect: false }
+        tooltip: { mode: 'index', intersect: false },
+        datalabels: {
+          display: false // ❌ 선그래프에는 수치 숨김
+        }
       },
       scales: {
         y: {
@@ -137,8 +142,10 @@ async function updateCharts() {
         }
       }
     }
+    // ❌ plugins 항목 생략 (ChartDataLabels 등록하지 않음)
   });
 
+  // ✅ 코멘트 영역 업데이트
   const commentBox = document.getElementById('changeComment');
   const diff = female - male;
   const genderComment = `📊 여학생이 남학생보다 ${year}년도 우울감 경험률이 ${Math.abs(diff).toFixed(1)}% ${diff > 0 ? "더 높습니다" : "더 낮습니다"}.`;

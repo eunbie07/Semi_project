@@ -661,6 +661,10 @@ section#map {
 }
 
 /* === 우울감 경험률 비교 (depression_compare) === */
+#depression {
+  padding-top: 15px;  /* 또는 원하는 값, 예: 80px */
+}
+
 .depression-compare-section {
   padding: 60px 20px;
   text-align: center;
