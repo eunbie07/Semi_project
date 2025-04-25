@@ -78,7 +78,6 @@ function goBackToQuizMenu() {
 }
 
 
-// ✅ DOM이 완전히 로드된 후 초기화
 window.addEventListener("DOMContentLoaded", () => {
   if (document.getElementById("question")) {
     updateQuiz();

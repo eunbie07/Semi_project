@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import json
 
-# ✅ 한글 폰트 설정
 plt.rcParams['font.family'] = ['Malgun Gothic', 'AppleGothic', 'NanumGothic', 'sans-serif']
 plt.rcParams['axes.unicode_minus'] = False
 
@@ -13,11 +12,9 @@ with open("breakfast_skip.json", "r", encoding="utf-8") as f:
 
 df = pd.DataFrame(data)
 
-# age가 '전체'로 저장되어 있을 수 있으므로 확인
 print(df["age"].unique())
 print(df["gender"].unique())
 
-# 성별 데이터만 추출 (연령이 없는 데이터 or 전체)
 df_gender_plot = df[df["age"].isna() | (df["age"] == "전체")].copy()
 
 # 타입 변환

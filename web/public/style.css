@@ -96,7 +96,7 @@ body::-webkit-scrollbar {
   z-index: 1000;
   padding: 10px 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  text-align: center; /* ✅ 여전히 유지 */
+  text-align: center; 
 }
 
 .nav-inner {
@@ -199,9 +199,9 @@ body::-webkit-scrollbar {
 
 
 .test-page-container {
-  max-width: 1000px;         /* ✅ 더 넓게 */
-  width: 100%;               /* ✅ 강제 전체 너비 */
-  padding: 50px;             /* ✅ 내부 여백 넉넉하게 */
+  max-width: 1000px;         
+  width: 100%;               
+  padding: 50px;             
   box-sizing: border-box;
   background: #fff;
   border-radius: 20px;
@@ -385,7 +385,7 @@ button:hover,
   min-height: 200px;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  display: block !important;  /* ✅ 혹시 JS에서 숨겼을 경우 강제 표시 */
+  display: block !important;  
 }
 
 
@@ -605,12 +605,12 @@ section#map {
   background-color: transparent;
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto; /* ✅ 중앙 정렬 핵심! */
+  margin: 0 auto; 
   padding: 0 2rem;
 }
 
 .map-section {
-  flex: 1 1 48%;  /* ✅ 동일한 비율로 양쪽 균형 */
+  flex: 1 1 48%; 
   min-width: 460px;
   max-width: 500px;
   background-color: #fff;
@@ -635,8 +635,8 @@ section#map {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;           /* 내부 요소들 간 여백 */
-  margin-bottom: 40px; /* 버튼 아래 공간 확보 */
+  gap: 20px;           
+  margin-bottom: 40px; 
 }
 
 .date-inputs {
@@ -664,9 +664,9 @@ section#map {
   height: 360px;
 }
 
-/* === 우울감 경험률 비교 (depression_compare) === */
+
 #depression {
-  padding-top: 20px;  /* 또는 원하는 값, 예: 80px */
+  padding-top: 20px;  
 }
 
 .depression-compare-section {

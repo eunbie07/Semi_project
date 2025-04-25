@@ -42,7 +42,7 @@ function showTab(tabId) {
     tryDraw();
   }
 
-  // ✅ 여기에 추가
+  
   if (tabId === 'breakfast_region') {
     const tryDraw = () => {
       if (window.kakao && window.kakao.maps && window.kakaoMapsLoaded) {

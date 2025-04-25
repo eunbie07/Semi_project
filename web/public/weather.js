@@ -137,6 +137,6 @@ fetch(url)
           }
         }
       },
-      plugins: [ChartDataLabels]  // ⛔ 이거 없으면 datalabels 설정이 무시됨!
+      plugins: [ChartDataLabels]  
     });
   });

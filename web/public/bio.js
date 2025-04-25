@@ -105,7 +105,7 @@ function drawBiorhythm() {
       },
       plugins: {
         datalabels: {
-          display: () => false  // ✅ 숫자 제거
+          display: () => false  
         },
         legend: {
           position: 'top',
@@ -128,6 +128,6 @@ function drawBiorhythm() {
         }
       }
     },
-    plugins: [ChartDataLabels]  // ✅ 플러그인 수동 등록
+    plugins: [ChartDataLabels]  
   });
 }

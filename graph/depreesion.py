@@ -2,8 +2,6 @@ import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 import numpy as np
 
-# ✅ 한글 폰트 설정
-# 윈도우용: 'Malgun Gothic', macOS용: 'AppleGothic', 리눅스용: 'NanumGothic'
 plt.rcParams['font.family'] = ['Malgun Gothic', 'AppleGothic', 'NanumGothic', 'sans-serif']
 plt.rcParams['axes.unicode_minus'] = False  # 마이너스 깨짐 방지
 

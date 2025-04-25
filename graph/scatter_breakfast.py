@@ -72,7 +72,6 @@ plt.title("Breakfast skip rate vs Depression rate", fontsize=16, fontweight='bol
 plt.legend(title="Year and Age", bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0)
 plt.ylim(20, 35)
 
-# ✅ 테두리: 아래/왼쪽만, 얇고 흐리게
 ax = plt.gca()
 for spine_name in ['top', 'right']:
     ax.spines[spine_name].set_visible(False)
