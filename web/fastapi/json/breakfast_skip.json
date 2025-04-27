@@ -3,7 +3,7 @@
     "gender": "전체",
     "age": "전체",
     "year": 2015,
-    "breakfast_skip_rate": "27.9"
+    "breakfast_skip_rate": 27.9
   },
   {
     "gender": "전체",
@@ -63,7 +63,7 @@
     "gender": "전체",
     "age": 14,
     "year": 2015,
-    "breakfast_skip_rate": "27.0"
+    "breakfast_skip_rate": 27.0
   },
   {
     "gender": "전체",
@@ -123,7 +123,7 @@
     "gender": "전체",
     "age": 15,
     "year": 2015,
-    "breakfast_skip_rate": "27.4"
+    "breakfast_skip_rate": 27.4
   },
   {
     "gender": "전체",
@@ -183,7 +183,7 @@
     "gender": "전체",
     "age": 16,
     "year": 2015,
-    "breakfast_skip_rate": "27.9"
+    "breakfast_skip_rate": 27.9
   },
   {
     "gender": "전체",
@@ -303,7 +303,7 @@
     "gender": "전체",
     "age": 18,
     "year": 2015,
-    "breakfast_skip_rate": "28.6"
+    "breakfast_skip_rate": 28.6
   },
   {
     "gender": "전체",
@@ -363,7 +363,7 @@
     "gender": "전체",
     "age": 19,
     "year": 2015,
-    "breakfast_skip_rate": "28.0"
+    "breakfast_skip_rate": 28.0
   },
   {
     "gender": "전체",
@@ -423,7 +423,7 @@
     "gender": "male",
     "age": "전체",
     "year": 2015,
-    "breakfast_skip_rate": "26.9"
+    "breakfast_skip_rate": 26.9
   },
   {
     "gender": "male",
@@ -483,7 +483,7 @@
     "gender": "male",
     "age": 14,
     "year": 2015,
-    "breakfast_skip_rate": "26.3"
+    "breakfast_skip_rate": 26.3
   },
   {
     "gender": "male",
@@ -543,7 +543,7 @@
     "gender": "male",
     "age": 15,
     "year": 2015,
-    "breakfast_skip_rate": "26.1"
+    "breakfast_skip_rate": 26.1
   },
   {
     "gender": "male",
@@ -603,7 +603,7 @@
     "gender": "male",
     "age": 16,
     "year": 2015,
-    "breakfast_skip_rate": "27.2"
+    "breakfast_skip_rate": 27.2
   },
   {
     "gender": "male",
@@ -663,7 +663,7 @@
     "gender": "male",
     "age": 17,
     "year": 2015,
-    "breakfast_skip_rate": "27.2"
+    "breakfast_skip_rate": 27.2
   },
   {
     "gender": "male",
@@ -723,7 +723,7 @@
     "gender": "male",
     "age": 18,
     "year": 2015,
-    "breakfast_skip_rate": "27.4"
+    "breakfast_skip_rate": 27.4
   },
   {
     "gender": "male",
@@ -783,7 +783,7 @@
     "gender": "male",
     "age": 19,
     "year": 2015,
-    "breakfast_skip_rate": "27.2"
+    "breakfast_skip_rate": 27.2
   },
   {
     "gender": "male",
@@ -843,7 +843,7 @@
     "gender": "female",
     "age": "전체",
     "year": 2015,
-    "breakfast_skip_rate": "28.9"
+    "breakfast_skip_rate": 28.9
   },
   {
     "gender": "female",
@@ -903,7 +903,7 @@
     "gender": "female",
     "age": 14,
     "year": 2015,
-    "breakfast_skip_rate": "27.9"
+    "breakfast_skip_rate": 27.9
   },
   {
     "gender": "female",
@@ -963,7 +963,7 @@
     "gender": "female",
     "age": 15,
     "year": 2015,
-    "breakfast_skip_rate": "28.7"
+    "breakfast_skip_rate": 28.7
   },
   {
     "gender": "female",
@@ -1023,7 +1023,7 @@
     "gender": "female",
     "age": 16,
     "year": 2015,
-    "breakfast_skip_rate": "28.5"
+    "breakfast_skip_rate": 28.5
   },
   {
     "gender": "female",
@@ -1083,7 +1083,7 @@
     "gender": "female",
     "age": 17,
     "year": 2015,
-    "breakfast_skip_rate": "29.2"
+    "breakfast_skip_rate": 29.2
   },
   {
     "gender": "female",
@@ -1143,7 +1143,7 @@
     "gender": "female",
     "age": 18,
     "year": 2015,
-    "breakfast_skip_rate": "29.9"
+    "breakfast_skip_rate": 29.9
   },
   {
     "gender": "female",
@@ -1203,7 +1203,7 @@
     "gender": "female",
     "age": 19,
     "year": 2015,
-    "breakfast_skip_rate": "28.9"
+    "breakfast_skip_rate": 28.9
   },
   {
     "gender": "female",
