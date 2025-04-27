@@ -6,7 +6,6 @@ import json
 plt.rcParams['font.family'] = ['Malgun Gothic', 'AppleGothic', 'NanumGothic', 'sans-serif']
 plt.rcParams['axes.unicode_minus'] = False
 
-# JSON 로드
 with open("breakfast_skip.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
@@ -17,12 +16,11 @@ print(df["gender"].unique())
 
 df_gender_plot = df[df["age"].isna() | (df["age"] == "전체")].copy()
 
-# 타입 변환
+
 df_gender_plot["gender"] = df_gender_plot["gender"].astype(str)
 df_gender_plot["year"] = df_gender_plot["year"].astype(int)
 df_gender_plot["breakfast_skip_rate"] = df_gender_plot["breakfast_skip_rate"].astype(float)
 
-# 그래프 그리기
 palette = {"남자": "#1f77b4", "여자": "#ff7f0e", "전체": "#2ca02c"}
 plt.figure(figsize=(12, 6))
 for gender in ["남자", "여자", "전체"]:

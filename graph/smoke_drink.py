@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 import platform
 
-# 한글 폰트 설정
 if platform.system() == 'Windows':
     plt.rc('font', family='Malgun Gothic')
 elif platform.system() == 'Darwin':
@@ -11,7 +10,7 @@ else:
 
 plt.rcParams['axes.unicode_minus'] = False
 
-# 데이터
+
 years = list(range(2010, 2025))
 
 boy_data = {
@@ -35,26 +34,25 @@ colors = {
     '흡연율': 'orange'
 }
 
-# 그래프 그리기
+
 fig, axes = plt.subplots(1, 2, figsize=(15, 6), sharey=True)
 
-# 남학생 그래프
+
 for label, data in boy_data.items():
     axes[0].plot(years, data, label=label, color=colors[label], linewidth=2.5, marker='o')
 axes[0].set_title('남학생 건강형태 변화', fontsize=14)
 axes[0].set_xlabel('년도')
 axes[0].set_ylabel('(%)')
 axes[0].set_yticks(range(0, 51, 5))
-axes[0].legend(loc='upper left')  # 위치 변경
+axes[0].legend(loc='upper left')  
 axes[0].grid(True)
 
-# 여학생 그래프
 for label, data in girl_data.items():
     axes[1].plot(years, data, label=label, color=colors[label], linewidth=2.5, marker='o')
 axes[1].set_title('여학생 건강형태 변화', fontsize=14)
 axes[1].set_xlabel('년도')
 axes[1].set_yticks(range(0, 51, 5))
-axes[1].legend(loc='upper left')  # 위치 변경
+axes[1].legend(loc='upper left')  
 axes[1].grid(True)
 
 fig.suptitle('청소년 건강형태 변화', fontsize=16, fontweight='bold')

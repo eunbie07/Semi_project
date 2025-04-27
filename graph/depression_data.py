@@ -12,7 +12,7 @@ df = pd.DataFrame(data)
 
 gender_map = {
     "male": "남자",
-    "female": "여자",  # ← 오타 수정!
+    "female": "여자",  
     "전체": "전체"
 }
 df["성별"] = df["gender"].map(gender_map)
@@ -26,7 +26,6 @@ for gender in ["남자", "여자", "전체"]:
 
     plt.plot(avg_by_year["year"], avg_by_year["depression_rate"], marker="o", label=gender)
     
-    # ▶ 숫자 표시
     for x, y in zip(avg_by_year["year"], avg_by_year["depression_rate"]):
         plt.text(x, y + 0.4, f"{y:.1f}", ha="center", fontsize=8)
 

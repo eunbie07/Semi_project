@@ -1,6 +1,4 @@
-// Chart.js 플러그인 로드 필요 (index.html 또는 상단에서 이미 로드된 상태여야 함)
-// <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-// <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
 
 const serviceKey = "89mzRrYVPoIjA0HWVA%2FtiFPmvByqnXJFK8acRZ9tVXmETXDcn%2FQq0LmCwdO%2B5H%2F4q4G6Emy3NFG2bLbk8pxoPQ%3D%3D";
 const today = new Date();

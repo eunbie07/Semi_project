@@ -39,18 +39,9 @@ depression_filtered = depression_df[
 
 merged_df = pd.merge(expected_usage, depression_filtered, on=['year', 'age'])
 
-# custom_palette = [
-#     "#cdb4db",  # 연보라
-#     "#ffc8dd",  # 연분홍
-#     "#bde0fe",  # 연하늘
-#     "#d3d3d3",  # 연회색
-#     "#e2f0cb",  # 연연두
-#     "#f1c0e8",  # 연보라핑크
-#     "#a2d2ff",  # 맑은 하늘
-# ]
 
-plt.figure(figsize=(12, 7))  # 통일된 크기
-sns.set(style="white")  # 그리드 없는 깔끔한 스타일
+plt.figure(figsize=(12, 7)) 
+sns.set(style="white")  
 
 sns.scatterplot(
     data=merged_df,
@@ -58,7 +49,7 @@ sns.scatterplot(
     y='depression_rate',
     hue='year',
     style='age',
-    # palette=custom_palette,
+    
     s=100
 )
 
@@ -71,7 +62,7 @@ sns.regplot(
     line_kws={'linewidth': 2, 'linestyle': '--'}
 )
 
-plt.title("Smartphone usage time vs Depression rate", fontsize=16, fontweight='bold')  # 통일된 제목 스타일
+plt.title("Smartphone usage time vs Depression rate", fontsize=16, fontweight='bold')  
 plt.xlabel("Smartphone usage time (hours)")
 plt.ylabel("Depression rate (%)")
 plt.legend(title='Year and Age', bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0)
@@ -81,8 +72,8 @@ ax = plt.gca()
 for spine_name in ['top', 'right']:
     ax.spines[spine_name].set_visible(False)
 for spine_name in ['left', 'bottom']:
-    ax.spines[spine_name].set_linewidth(0.6)         # 얇게
-    ax.spines[spine_name].set_color('#AAAAAA')       # 흐리게
+    ax.spines[spine_name].set_linewidth(0.6)         
+    ax.spines[spine_name].set_color('#AAAAAA')       
 
 plt.grid(False)
 plt.tight_layout()

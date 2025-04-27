@@ -60,7 +60,6 @@ function showResult() {
 }
 
 function loadTest() {
-  // 🔴 버튼과 설명 문구 모두 숨기기
   const startBtn = document.getElementById("start-test-btn");
   if (startBtn) startBtn.style.display = "none";
 

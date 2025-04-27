@@ -93,27 +93,27 @@
 
   <script>
     window.addEventListener("DOMContentLoaded", () => {
-      // bio.html 삽입
+      
       fetch("bio.html")
         .then(res => res.text())
         .then(html => {
           document.getElementById("bio-container").innerHTML = html;
         });
 
-      // depression.html 삽입
+      
       fetch("depression.html")
         .then(res => res.text())
         .then(html => {
           document.getElementById("depression-container").innerHTML = html;
         });
 
-      // quiz_menu.html 삽입 후 이벤트 연결
+      
       fetch("quiz_menu.html")
         .then(res => res.text())
         .then(html => {
           const quizContainer = document.getElementById("quiz-container");
           quizContainer.innerHTML = html;
-          initQuizMenu(); // quiz_loader.js 함수 호출
+          initQuizMenu(); 
         });
 
       // scatter.html 삽입
@@ -124,13 +124,13 @@
         });
     });
 
-    // 전역에서 사용할 수 있도록 함수 노출
+    
     function loadQuiz1() {
       fetch("quiz_1.html")
         .then(res => res.text())
         .then(html => {
           document.getElementById("quiz-container").innerHTML = html;
-          initQuiz1(); // 삽입 후 실행
+          initQuiz1(); 
         });
     }
 
@@ -139,7 +139,7 @@
         .then(res => res.text())
         .then(html => {
           document.getElementById("quiz-container").innerHTML = html;
-          initQuiz2(); // 삽입 후 실행
+          initQuiz2(); 
         });
     }
 

@@ -29,7 +29,7 @@ function easeInOutCubic(t) {
 window.addEventListener("wheel", (e) => {
   if (isScrolling) return;
 
-  e.preventDefault(); // 기본 휠 스크롤 막음
+  e.preventDefault(); 
   isScrolling = true;
 
   const direction = e.deltaY > 0 ? 1 : -1;
@@ -39,7 +39,7 @@ window.addEventListener("wheel", (e) => {
 
   if (nextIndex >= 0 && nextIndex < sections.length) {
     const targetY = sections[nextIndex].offsetTop;
-    smoothScrollTo(targetY, 1200); // ⏱ 원하는 속도로 조절 가능
+    smoothScrollTo(targetY, 1200); 
   } else {
     isScrolling = false;
   }

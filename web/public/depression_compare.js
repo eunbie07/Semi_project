@@ -3,7 +3,6 @@
 
 Chart.register(ChartDataLabels);
 
-// API 엔드포인트
 const API_BASE = "http://192.168.1.23:3001/depression";
 let barChart, lineChart;
 

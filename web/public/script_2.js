@@ -1,5 +1,5 @@
 
-// ---------------------- 사이드바 토글 ----------------------
+
 const menuToggle = document.getElementById('menuToggle');
 const sidebar = document.getElementById('sidebar');
 
@@ -7,7 +7,7 @@ menuToggle.addEventListener('click', () => {
   sidebar.classList.toggle('active');
 });
 
-// ---------------------- 페이지 로딩 초기화 ----------------------
+
 window.addEventListener("DOMContentLoaded", () => {
   const content = document.querySelector('.content');
   content.classList.add('home-fullscreen');
@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// ---------------------- 탭 전환 ----------------------
+
 function showTab(tabId) {
   const tabs = document.querySelectorAll('.tab');
   tabs.forEach(tab => {
@@ -57,7 +57,7 @@ function showTab(tabId) {
 }
 
 
-// ---------------------- 우울감 데이터 불러오기 ----------------------
+
 async function getDepression() {
   const age = parseInt(document.getElementById("age").value);
   const gender = document.getElementById("gender").value;
@@ -92,7 +92,7 @@ async function getDepression() {
   }
 }
 
-// ---------------------- 스트레스 고민 주제 ----------------------
+
 async function getStressIssues() {
   const year = parseInt(document.getElementById("si_year").value);
   const resultEl = document.getElementById("resultStress");
@@ -142,7 +142,7 @@ async function getStressIssues() {
   }
 }
 
-// ---------------------- 스마트폰 부정적 영향 ----------------------
+
 async function getSmartphoneBadeffect() {
   const age = parseInt(document.getElementById("sp_age").value);
   const year = parseInt(document.getElementById("sp_year").value);
@@ -178,7 +178,7 @@ async function getSmartphoneBadeffect() {
   }
 }
 
-// ---------------------- 지역별 스트레스 지도 ----------------------
+
 function updateMapByYear() {
   const year = parseInt(document.getElementById("map_year").value);
   if (isNaN(year) || year < 2015 || year > 2024) {
@@ -219,13 +219,13 @@ function drawStressMap(year = 2024) {
       .slice(0, 3)
       .map(r => r.region);
 
-    // Top 3 먼저 (빨강)
+    
     top3Regions.forEach(topRegion => {
       const topData = validData.find(d => d.region === topRegion);
       if (topData) addMarker(topData, "#EF4444", map, 100);
     });
 
-    // 나머지 (녹색)
+    
     validData
       .filter(d => !top3Regions.includes(d.region))
       .forEach(data => addMarker(data, "#22C55E", map, 1));
@@ -354,13 +354,13 @@ function drawBreakfastMap(year = 2024) {
       .slice(0, 3)
       .map(r => r.region);
 
-    // Top 3 빨강
+    
     top3Regions.forEach(topRegion => {
       const topData = validData.find(d => d.region === topRegion);
       if (topData) addBreakfastMarker(topData, "#EF4444", map, 100);
     });
 
-    // 나머지 녹색
+    
     validData
       .filter(d => !top3Regions.includes(d.region))
       .forEach(data => addBreakfastMarker(data, "#22C55E", map, 1));

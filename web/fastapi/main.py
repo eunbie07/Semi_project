@@ -146,7 +146,6 @@ def get_stress_rate_by_region(region: str, year: int):
     print(f"[스트레스 지역 요청] region={region}, year={year}")
 
     for item in stress_region_data:
-        # 여기서도 item["region"]에 .strip()을 적용해야 정확히 비교됨
         if item["region"].strip() == region:
             for record in item["data"]:
                 if record["year"] == year:
@@ -177,7 +176,7 @@ def get_breakfast_rate(region: str = Query(...), year: int = Query(...)):
     region = region.strip()
     print(f"[아침식사 결식률 요청] region={region}, year={year}")
 
-    year_key = f"{year}.0"  # <- 이걸로 수정 필요
+    year_key = f"{year}.0"  
     for item in breakfast_region_data:
         if item["지역"].strip() == region:
             if year_key in item:

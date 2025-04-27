@@ -66,10 +66,10 @@ function goBackToQuizMenu() {
       const container = document.getElementById("quiz-container");
       container.innerHTML = html;
 
-      // 배경색 초기화
+      
       document.getElementById("quiz").className = "full-section home-hero bg-gray";
 
-      // 스크롤 이동 (선택)
+      
       window.scrollTo({
         top: document.getElementById("quiz").offsetTop,
         behavior: "smooth"

@@ -23,7 +23,7 @@ function updateBreakfastMapByYear() {
   drawBreakfastMap(year);
 }
 
-// 지역 좌표 공통
+
 const regionCoords = {
   "서울": [126.9780, 37.5665], "부산": [129.0756, 35.1796],
   "대구": [128.6014, 35.8714], "인천": [126.7052, 37.4563],

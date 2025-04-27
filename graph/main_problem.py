@@ -1,11 +1,9 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-# 한글 폰트 설정 (운영체제별로 자동 대응)
 plt.rcParams['font.family'] = ['Malgun Gothic', 'AppleGothic', 'NanumGothic', 'sans-serif']
 plt.rcParams['axes.unicode_minus'] = False
 
-# 카테고리 및 데이터
 categories = [
     "외모", "신체적·정신적 건강", "가정 환경(부모의 불화 등)", "가계경제어려움", "용돈부족",
     "공부(성적, 적성 등)", "직업(직업선택, 보수 등)", "친구(우정)", "연애상대와의 관계(성문제 포함)",
