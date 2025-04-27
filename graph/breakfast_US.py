@@ -1,12 +1,18 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import json
 
+# 한글 폰트 설정
 plt.rcParams['font.family'] = ['Malgun Gothic', 'AppleGothic', 'NanumGothic', 'sans-serif']
 plt.rcParams['axes.unicode_minus'] = False
 
-categories = ["슬픔·절망감", "자살생각", "자살계획", "자살시도"]
-daily = [21.0, 10.0, 7.0, 2.0]   
-skip = [45.0, 22.0, 17.0, 9.0]   
+# JSON 파일 불러오기
+with open('breakfast_US.json', 'r', encoding='utf-8') as f:
+    data = json.load(f)
+
+categories = data['categories']
+daily = data['daily']
+skip = data['skip']
 
 bar_width = 0.35
 x = np.arange(len(categories))
@@ -29,4 +35,3 @@ for i in range(len(categories)):
 plt.tight_layout()
 plt.savefig('breakfast_US.png')
 plt.show()
-

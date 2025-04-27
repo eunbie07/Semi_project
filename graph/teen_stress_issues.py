@@ -1,7 +1,6 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
-import matplotlib.cm as cm
 import numpy as np
 import json
 
@@ -15,11 +14,9 @@ with open("teen_stress_issues.json", "r", encoding="utf-8") as f:
 
 df = pd.DataFrame(data)
 
-# 결측값 처리 및 피벗 테이블 생성
 df['시점'] = df['시점'].fillna(method='ffill')
 bar_df = df.pivot_table(index='항목', columns='시점', values='고민비율(%)')
 
-# 사용자 지정 순서대로 재정렬
 custom_order = [
     '외모', '신체적·정신적 건강', '가정 환경(부모의 불화등)', '가계경제어려움', '용돈부족',
     '공부(성적, 적성 등)', '직업(직업선택, 보수 등)', '친구(우정)', '연애 상대와의 관계(성문제 포함)',
@@ -27,11 +24,10 @@ custom_order = [
 ]
 ordered_bar_df = bar_df.reindex(custom_order)
 
-# 그래프 스타일 설정
 plt.figure(figsize=(12, 6))
 bar_width = 0.13
 x = np.arange(len(ordered_bar_df.index))
-colors = ['#f87171', '#4ade80', '#facc15', '#c084fc', '#60a5fa']  # 고정 색상
+colors = ['#f87171', '#4ade80', '#facc15', '#c084fc', '#60a5fa'] 
 
 for i, (year, color) in enumerate(zip(ordered_bar_df.columns, colors)):
     bar_positions = x + bar_width * i
@@ -49,7 +45,6 @@ plt.title("청소년 고민 (2016~2024)", fontsize=14, weight='bold')
 plt.legend(title="연도", fontsize=10, title_fontsize=11)
 plt.grid(axis='y', linestyle='--', alpha=0.5)
 
-# 전체 테두리 추가
 for spine in plt.gca().spines.values():
     spine.set_visible(True)
     spine.set_linewidth(1.0)

@@ -176,9 +176,9 @@ def get_breakfast_rate(region: str = Query(...), year: int = Query(...)):
     region = region.strip()
     print(f"[아침식사 결식률 요청] region={region}, year={year}")
 
-    year_key = f"{year}.0"  
+    year_key = str(year) 
     for item in breakfast_region_data:
-        if item["지역"].strip() == region:
+        if item["region"].strip() == region:
             if year_key in item:
                 return {
                     "result": True,

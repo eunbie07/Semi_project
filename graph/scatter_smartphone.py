@@ -1,7 +1,6 @@
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-import matplotlib.font_manager as fm
 import warnings
 
 warnings.filterwarnings("ignore", category=UserWarning)
